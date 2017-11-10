@@ -23,10 +23,14 @@
 
 @property (nonatomic, strong) NSDate *endDate; //结束时间
 
+@property (nonatomic) NSDate *date;
+
 @property (nonatomic, copy) NSString *tag; //标签
 
 @property (nonatomic, copy) NSString *group; //群组
 
+//! 背景图片
+@property (nonatomic, copy) NSString *backgroundPost;
 /*
  
  待定需求：
@@ -36,5 +40,7 @@
  */
 
 + (instancetype)event;
+
++ (instancetype)eventWithTitle:(NSString *)tile content:(NSString *)content;
 
 @end

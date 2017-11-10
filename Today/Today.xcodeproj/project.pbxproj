@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DC86CB5BF631B4C1657CAFE /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F985833723EC562DBA20D86 /* libPods-Today.a */; };
+		3B0F89181FB568EF00DB8014 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F89171FB568EF00DB8014 /* HomeViewController.m */; };
+		3B0F891C1FB56AC300DB8014 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891B1FB56AC300DB8014 /* BaseViewController.m */; };
+		3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */; };
 		3BD058081E5BE1CB00C891E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD058071E5BE1CB00C891E4 /* main.m */; };
 		3BD0580B1E5BE1CB00C891E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0580A1E5BE1CB00C891E4 /* AppDelegate.m */; };
 		3BD0580E1E5BE1CB00C891E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0580D1E5BE1CB00C891E4 /* ViewController.m */; };
@@ -29,7 +33,6 @@
 		3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5101E6410E300223E49 /* EventsManager.m */; };
 		3BF1C5141E642DC900223E49 /* EventGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5131E642DC900223E49 /* EventGroupManager.m */; };
 		3BF1C5181E64353100223E49 /* APNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5171E64353100223E49 /* APNDispatcher.m */; };
-		47E9F0C4CE460B32F42D537D /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A99F9AE76F37535D3886C9C /* libPods-Today.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B0F89161FB568EF00DB8014 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3B0F89171FB568EF00DB8014 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3B0F891A1FB56AC300DB8014 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3B0F891B1FB56AC300DB8014 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		3B0F891D1FB56AEA00DB8014 /* WritingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritingViewController.h; sourceTree = "<group>"; };
+		3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingViewController.m; sourceTree = "<group>"; };
 		3BD058031E5BE1CB00C891E4 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD058071E5BE1CB00C891E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BD058091E5BE1CB00C891E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,9 +106,9 @@
 		3BF1C5131E642DC900223E49 /* EventGroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGroupManager.m; sourceTree = "<group>"; };
 		3BF1C5161E64353100223E49 /* APNDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNDispatcher.h; sourceTree = "<group>"; };
 		3BF1C5171E64353100223E49 /* APNDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNDispatcher.m; sourceTree = "<group>"; };
-		465CA5B0F836B8A6E886343A /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
-		6A99F9AE76F37535D3886C9C /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E44AB8638FA2149DBE56E6FA /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		4F985833723EC562DBA20D86 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC61A3E2FC4B01B23A0E8E85 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		FF5F3C538B926C3EDB7CEA8A /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E9F0C4CE460B32F42D537D /* libPods-Today.a in Frameworks */,
+				1DC86CB5BF631B4C1657CAFE /* libPods-Today.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,23 +131,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3456984CCD1A9CA0302E92D7 /* Pods */ = {
+		3B0F890B1FB5689A00DB8014 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				E44AB8638FA2149DBE56E6FA /* Pods-Today.debug.xcconfig */,
-				465CA5B0F836B8A6E886343A /* Pods-Today.release.xcconfig */,
+				3B0F890C1FB568D600DB8014 /* Home */,
+				3B0F89111FB568D600DB8014 /* Writing */,
 			);
-			name = Pods;
+			path = Business;
+			sourceTree = "<group>";
+		};
+		3B0F890C1FB568D600DB8014 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F890D1FB568D600DB8014 /* Model */,
+				3B0F890E1FB568D600DB8014 /* UIControl */,
+				3B0F890F1FB568D600DB8014 /* ViewController */,
+				3B0F89101FB568D600DB8014 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3B0F890D1FB568D600DB8014 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B0F890E1FB568D600DB8014 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		3B0F890F1FB568D600DB8014 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F89161FB568EF00DB8014 /* HomeViewController.h */,
+				3B0F89171FB568EF00DB8014 /* HomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3B0F89101FB568D600DB8014 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B0F89111FB568D600DB8014 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F89121FB568D600DB8014 /* Model */,
+				3B0F89131FB568D600DB8014 /* UIControl */,
+				3B0F89141FB568D600DB8014 /* ViewController */,
+				3B0F89151FB568D600DB8014 /* ViewModel */,
+			);
+			path = Writing;
+			sourceTree = "<group>";
+		};
+		3B0F89121FB568D600DB8014 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B0F89131FB568D600DB8014 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		3B0F89141FB568D600DB8014 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F891D1FB56AEA00DB8014 /* WritingViewController.h */,
+				3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3B0F89151FB568D600DB8014 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B0F89191FB56AB600DB8014 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F891A1FB56AC300DB8014 /* BaseViewController.h */,
+				3B0F891B1FB56AC300DB8014 /* BaseViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		3BD057FA1E5BE1CB00C891E4 = {
 			isa = PBXGroup;
 			children = (
+				E6FA4BCAFDE0591BE9C8677B /* Frameworks */,
+				3BD058041E5BE1CB00C891E4 /* Products */,
 				3BD058051E5BE1CB00C891E4 /* Today */,
 				3BF1C5001E640F6F00223E49 /* TodayWidget */,
-				3BD058041E5BE1CB00C891E4 /* Products */,
-				3456984CCD1A9CA0302E92D7 /* Pods */,
-				E6FA4BCAFDE0591BE9C8677B /* Frameworks */,
+				FA0A318B93E1A49323BE667A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,18 +254,16 @@
 		3BD058051E5BE1CB00C891E4 /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				3BD058391E5C31C000C891E4 /* Foundation */,
+				3B0F89191FB56AB600DB8014 /* Base */,
+				3B0F890B1FB5689A00DB8014 /* Business */,
 				3BD0581E1E5BE37800C891E4 /* Components */,
+				3BD058391E5C31C000C891E4 /* Foundation */,
 				3BD0581D1E5BE37200C891E4 /* Pages */,
+				3BD058061E5BE1CB00C891E4 /* Supporting Files */,
 				3BD058091E5BE1CB00C891E4 /* AppDelegate.h */,
 				3BD0580A1E5BE1CB00C891E4 /* AppDelegate.m */,
 				3BD0580C1E5BE1CB00C891E4 /* ViewController.h */,
 				3BD0580D1E5BE1CB00C891E4 /* ViewController.m */,
-				3BD0580F1E5BE1CB00C891E4 /* Main.storyboard */,
-				3BD058121E5BE1CB00C891E4 /* Assets.xcassets */,
-				3BD058141E5BE1CB00C891E4 /* LaunchScreen.storyboard */,
-				3BD058171E5BE1CB00C891E4 /* Info.plist */,
-				3BD058061E5BE1CB00C891E4 /* Supporting Files */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -173,31 +271,34 @@
 		3BD058061E5BE1CB00C891E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BD058121E5BE1CB00C891E4 /* Assets.xcassets */,
+				3BD058171E5BE1CB00C891E4 /* Info.plist */,
+				3BD058141E5BE1CB00C891E4 /* LaunchScreen.storyboard */,
+				3BD0580F1E5BE1CB00C891E4 /* Main.storyboard */,
 				3BD0583E1E5C45A800C891E4 /* github.jpeg */,
 				3BD058071E5BE1CB00C891E4 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3BD0581D1E5BE37200C891E4 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				3BF1C4F51E640CB900223E49 /* ManageEvents */,
-				3BD058261E5BE48000C891E4 /* LoginRegister */,
 			);
-			name = Pages;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		3BD0581E1E5BE37800C891E4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				3BF1C5151E6434DD00223E49 /* APNDispatcher */,
+				3BD0581F1E5BE39200C891E4 /* Account */,
+				3BD0582A1E5BE7DC00C891E4 /* Constant */,
 				3BD0582F1E5BF87500C891E4 /* Events */,
 				3BD0582B1E5BE83D00C891E4 /* LeanCloud */,
-				3BD0582A1E5BE7DC00C891E4 /* Constant */,
-				3BD0581F1E5BE39200C891E4 /* Account */,
 			);
-			name = Components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		3BD0581F1E5BE39200C891E4 /* Account */ = {
@@ -205,19 +306,12 @@
 			children = (
 				3BD058201E5BE3A800C891E4 /* Account.h */,
 				3BD058211E5BE3A800C891E4 /* Account.m */,
-				3BD058271E5BE52F00C891E4 /* AccountService.h */,
-				3BD058281E5BE52F00C891E4 /* AccountService.m */,
 				3BD058231E5BE46400C891E4 /* AccountConfiguration.h */,
 				3BD058241E5BE46400C891E4 /* AccountConfiguration.m */,
+				3BD058271E5BE52F00C891E4 /* AccountService.h */,
+				3BD058281E5BE52F00C891E4 /* AccountService.m */,
 			);
-			name = Account;
-			sourceTree = "<group>";
-		};
-		3BD058261E5BE48000C891E4 /* LoginRegister */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = LoginRegister;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		3BD0582A1E5BE7DC00C891E4 /* Constant */ = {
@@ -225,7 +319,7 @@
 			children = (
 				3BD058381E5C24D600C891E4 /* TodayConstant.h */,
 			);
-			name = Constant;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		3BD0582B1E5BE83D00C891E4 /* LeanCloud */ = {
@@ -234,22 +328,22 @@
 				3BD0582C1E5BE84B00C891E4 /* LeanCloud.h */,
 				3BD0582D1E5BE84B00C891E4 /* LeanCloud.m */,
 			);
-			name = LeanCloud;
+			path = LeanCloud;
 			sourceTree = "<group>";
 		};
 		3BD0582F1E5BF87500C891E4 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				3BD058301E5BF88600C891E4 /* TodayEvents.h */,
-				3BD058311E5BF88600C891E4 /* TodayEvents.m */,
-				3BD058331E5BF9FB00C891E4 /* EventsRepeatPolicy.h */,
-				3BD058341E5BF9FB00C891E4 /* EventsRepeatPolicy.m */,
-				3BF1C50F1E6410E300223E49 /* EventsManager.h */,
-				3BF1C5101E6410E300223E49 /* EventsManager.m */,
 				3BF1C5121E642DC900223E49 /* EventGroupManager.h */,
 				3BF1C5131E642DC900223E49 /* EventGroupManager.m */,
+				3BF1C50F1E6410E300223E49 /* EventsManager.h */,
+				3BF1C5101E6410E300223E49 /* EventsManager.m */,
+				3BD058331E5BF9FB00C891E4 /* EventsRepeatPolicy.h */,
+				3BD058341E5BF9FB00C891E4 /* EventsRepeatPolicy.m */,
+				3BD058301E5BF88600C891E4 /* TodayEvents.h */,
+				3BD058311E5BF88600C891E4 /* TodayEvents.m */,
 			);
-			name = Events;
+			path = Events;
 			sourceTree = "<group>";
 		};
 		3BD058391E5C31C000C891E4 /* Foundation */ = {
@@ -257,7 +351,7 @@
 			children = (
 				3BD0583A1E5C31C800C891E4 /* Category */,
 			);
-			name = Foundation;
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		3BD0583A1E5C31C800C891E4 /* Category */ = {
@@ -266,7 +360,7 @@
 				3BD0583B1E5C31E200C891E4 /* NSDate+events.h */,
 				3BD0583C1E5C31E200C891E4 /* NSDate+events.m */,
 			);
-			name = Category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		3BF1C4F51E640CB900223E49 /* ManageEvents */ = {
@@ -275,16 +369,16 @@
 				3BF1C4F61E640CDC00223E49 /* AddEventsViewController.h */,
 				3BF1C4F71E640CDC00223E49 /* AddEventsViewController.m */,
 			);
-			name = ManageEvents;
+			path = ManageEvents;
 			sourceTree = "<group>";
 		};
 		3BF1C5001E640F6F00223E49 /* TodayWidget */ = {
 			isa = PBXGroup;
 			children = (
+				3BF1C5071E640F6F00223E49 /* Info.plist */,
+				3BF1C5041E640F6F00223E49 /* MainInterface.storyboard */,
 				3BF1C5011E640F6F00223E49 /* TodayViewController.h */,
 				3BF1C5021E640F6F00223E49 /* TodayViewController.m */,
-				3BF1C5041E640F6F00223E49 /* MainInterface.storyboard */,
-				3BF1C5071E640F6F00223E49 /* Info.plist */,
 			);
 			path = TodayWidget;
 			sourceTree = "<group>";
@@ -295,16 +389,25 @@
 				3BF1C5161E64353100223E49 /* APNDispatcher.h */,
 				3BF1C5171E64353100223E49 /* APNDispatcher.m */,
 			);
-			name = APNDispatcher;
+			path = APNDispatcher;
 			sourceTree = "<group>";
 		};
 		E6FA4BCAFDE0591BE9C8677B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A99F9AE76F37535D3886C9C /* libPods-Today.a */,
 				3BF1C4FE1E640F6F00223E49 /* NotificationCenter.framework */,
+				4F985833723EC562DBA20D86 /* libPods-Today.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0A318B93E1A49323BE667A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F3C538B926C3EDB7CEA8A /* Pods-Today.debug.xcconfig */,
+				BC61A3E2FC4B01B23A0E8E85 /* Pods-Today.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,13 +417,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BD0581A1E5BE1CB00C891E4 /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
-				9B3DBE4B2A702579E57D6257 /* [CP] Check Pods Manifest.lock */,
+				3FF0E984DD557810807C95B5 /* [CP] Check Pods Manifest.lock */,
 				3BD057FF1E5BE1CB00C891E4 /* Sources */,
 				3BD058001E5BE1CB00C891E4 /* Frameworks */,
 				3BD058011E5BE1CB00C891E4 /* Resources */,
-				E8048D90A1559B1D48F3FF56 /* [CP] Embed Pods Frameworks */,
-				657EDD0BD24857CB4D3861F2 /* [CP] Copy Pods Resources */,
 				3BF1C50E1E640F6F00223E49 /* Embed App Extensions */,
+				312C2F19B1226A0BD1104B25 /* [CP] Embed Pods Frameworks */,
+				9A043222C30B528EDF82C9BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -410,37 +513,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		657EDD0BD24857CB4D3861F2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B3DBE4B2A702579E57D6257 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E8048D90A1559B1D48F3FF56 /* [CP] Embed Pods Frameworks */ = {
+		312C2F19B1226A0BD1104B25 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,6 +526,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FF0E984DD557810807C95B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Today-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A043222C30B528EDF82C9BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -468,8 +578,11 @@
 				3BD058221E5BE3A800C891E4 /* Account.m in Sources */,
 				3BF1C5181E64353100223E49 /* APNDispatcher.m in Sources */,
 				3BD0580B1E5BE1CB00C891E4 /* AppDelegate.m in Sources */,
+				3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */,
 				3BD058251E5BE46400C891E4 /* AccountConfiguration.m in Sources */,
 				3BD0582E1E5BE84B00C891E4 /* LeanCloud.m in Sources */,
+				3B0F89181FB568EF00DB8014 /* HomeViewController.m in Sources */,
+				3B0F891C1FB56AC300DB8014 /* BaseViewController.m in Sources */,
 				3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */,
 				3BD058081E5BE1CB00C891E4 /* main.m in Sources */,
 				3BD0583D1E5C31E200C891E4 /* NSDate+events.m in Sources */,
@@ -504,6 +617,7 @@
 				3BD058101E5BE1CB00C891E4 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3BD058141E5BE1CB00C891E4 /* LaunchScreen.storyboard */ = {
@@ -512,6 +626,7 @@
 				3BD058151E5BE1CB00C891E4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3BF1C5041E640F6F00223E49 /* MainInterface.storyboard */ = {
@@ -520,6 +635,7 @@
 				3BF1C5051E640F6F00223E49 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -615,26 +731,30 @@
 		};
 		3BD0581B1E5BE1CB00C891E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44AB8638FA2149DBE56E6FA /* Pods-Today.debug.xcconfig */;
+			baseConfigurationReference = FF5F3C538B926C3EDB7CEA8A /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Today/Info.plist;
+				INFOPLIST_FILE = "Today/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shendong.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TESTING = "";
 			};
 			name = Debug;
 		};
 		3BD0581C1E5BE1CB00C891E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 465CA5B0F836B8A6E886343A /* Pods-Today.release.xcconfig */;
+			baseConfigurationReference = BC61A3E2FC4B01B23A0E8E85 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Today/Info.plist;
+				INFOPLIST_FILE = "Today/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shendong.Today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TESTING = "";
 			};
 			name = Release;
@@ -693,6 +813,7 @@
 				3BF1C50D1E640F6F00223E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

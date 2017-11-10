@@ -30,4 +30,9 @@ RegisterAVObject
     return [TodayEvents objectWithClassName:@"TodayEvents"];
 }
 
++ (instancetype)eventWithTitle:(NSString *)tile content:(NSString *)content{
+    TodayEvents *event = [TodayEvents event];
+    event.date = [NSDate date];
+    return event;
+}
 @end
