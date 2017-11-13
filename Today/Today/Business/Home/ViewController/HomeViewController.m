@@ -13,15 +13,15 @@
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic) NSMutableArray *models;
+@property (nonatomic) NSMutableArray<__kindof TodayEvents *> *lists;
 @end
 
 @implementation HomeViewController
-- (NSMutableArray *)models{
-    if (!_models) {
-        _models = [NSMutableArray new];
+- (NSMutableArray<__kindof TodayEvents *> *)lists{
+    if(!_lists){
+        _lists = [NSMutableArray new];
     }
-    return _models;
+    return _lists;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,8 +42,8 @@
         NSLog(@"name = %@",account.objectId);
     }
     NSLog(@"array = %lu",array.count);
-    [self.models removeAllObjects];
-    [self.models addObjectsFromArray:array];
+    [self.lists removeAllObjects];
+    [self.lists addObjectsFromArray:array];
     [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -52,12 +52,12 @@
 }
 // MARK: - UITableView datasource and delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.models.count;
+    return self.lists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    TodayEvents *today = self.models[indexPath.row];
+    TodayEvents *today = self.lists[indexPath.row];
     cell.textLabel.text = today.contents;
     return cell;
 }

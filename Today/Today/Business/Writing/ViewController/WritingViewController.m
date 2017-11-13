@@ -33,9 +33,14 @@
     [today setObject:self.contentView.text forKey:@"contents"];
     [today setObject:[NSDate date]  forKey:@"beginDate"];
     [today setObject:[[NSDate date] dateByAddingHours:8]  forKey:@"endDate"];
+    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"github" ofType:@"jpeg"]];
+    AVFile *file = [AVFile fileWithData:data];
+    [today setObject:file forKey:@"image"];
+    
     today.tag = @"Study";
     today.group = @"Home";
-    [today save];
+    
+    [today saveEvents];
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

@@ -129,7 +129,7 @@
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         TodayEvents *events = objects.firstObject;
-        NSLog(@"begin =%@, end = %@",events.beginDate, events.endDate);
+//        NSLog(@"begin =%@, end = %@",events.beginDate, events.endDate);
     }];
 }
 - (void)test{

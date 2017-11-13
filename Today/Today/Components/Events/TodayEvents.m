@@ -12,7 +12,7 @@
 
 @implementation TodayEvents
 
-@dynamic owner, title, contents, beginDate, endDate, tag, group;
+@dynamic owner, title, contents, date, tag, group;
 
 RegisterAVObject
 
@@ -30,9 +30,29 @@ RegisterAVObject
     return [TodayEvents objectWithClassName:@"TodayEvents"];
 }
 
-+ (instancetype)eventWithTitle:(NSString *)tile content:(NSString *)content{
++ (instancetype)eventWithTitle:(NSString *)title content:(NSString *)content{
     TodayEvents *event = [TodayEvents event];
+    event.title = title;
     event.date = [NSDate date];
     return event;
 }
+@end
+
+@implementation TodayEvents(AVHelper)
+
+- (BOOL)saveEvents{
+    NSError *error = nil;
+    [self save:&error];
+    if(error)return NO;
+    return YES;
+}
+- (BOOL)deleteEvents{
+    return YES;
+}
++ (NSArray<__kindof TodayEvents *> *)queryAllEvents{
+    AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
+    NSArray *array =  [query findObjects];
+    return array;
+}
+
 @end

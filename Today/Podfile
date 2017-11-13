@@ -12,6 +12,7 @@ target 'Today' do
   pod ‘SDNetworking’
   pod 'AFNetworking', '~> 2.5'
   pod 'ReactiveCocoa', '~> 2.5'
+  pod 'SDWebImage'
   # leanCloud
   pod 'AVOSCloud', '~>4.0.0'               # 数据存储、短信、云引擎调用等基础服务模块
   pod 'AVOSCloudIM', '~>4.0.0'             # 实时通信模块
