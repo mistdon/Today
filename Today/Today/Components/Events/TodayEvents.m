@@ -9,10 +9,11 @@
 #import "TodayEvents.h"
 #import "Account.h"
 #import "TodayConstant.h"
+#import <DateTools/DateTools.h>
 
 @implementation TodayEvents
 
-@dynamic title, contents, recordDate, tag, group;
+@dynamic title, contents, tag, group, geoPoint, locationStr;
 
 RegisterAVObject
 
@@ -33,9 +34,16 @@ RegisterAVObject
 + (instancetype)eventWithTitle:(NSString *)title content:(NSString *)content{
     TodayEvents *event = [TodayEvents event];
     event.title = title;
-    event.recordDate = [NSDate date];
     return event;
 }
+@end
+
+@implementation TodayEvents(Transfer)
+
+- (NSString *)sd_formateCreateDateString{
+    return [self.createdAt formattedDateWithFormat:@"yyyy-MM-dd HH:mm:ss"];
+}
+
 @end
 
 @implementation TodayEvents(AVHelper)

@@ -9,8 +9,12 @@
 #import "HomeItemTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+
 @interface HomeItemTableViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 
@@ -32,6 +36,8 @@
     self.titleLabel.text = todayEvents.title;
     self.contentTextView.text = todayEvents.contents;
     [self.postImageView sd_setImageWithURL:[NSURL URLWithString:todayEvents.image.url] placeholderImage:nil];
+    self.dateLabel.text = [todayEvents sd_formateCreateDateString];
+    self.locationLabel.text = todayEvents.locationStr;
 }
 
 @end

@@ -26,6 +26,7 @@
     if (@available(iOS 11.0, *)) {
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
+    self.backgroundColor = [UIColor clearColor];
     self.tableHeaderView = [UIView new];
     self.tableFooterView = [UIView new];
 }

@@ -28,6 +28,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setBackgroundImageUrl:KTempBackgroundUrl];
     [self configureTabbar];
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -48,13 +49,7 @@
 //    NSLog(@"array = %lu",array.count);
     
     NSArray *arr = [TodayEvents queryAllEvents];
-////#if AV_IOS_ONLY
-////    NSLog(@"AV_IOS_ONLY");
-////
-////    [AVGeoPoint geoPointForCurrentLocationInBackground:^(AVGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
-////        NSLog(@"geoPoint = %@", geoPoint);
-////    }];
-//#endif
+
     [self.lists removeAllObjects];
     [self.lists addObjectsFromArray:arr];
     [self.tableView reloadData];

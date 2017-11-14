@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const KTempBackgroundUrl;
+
 @interface BaseViewController : UIViewController
+
+@property (nonatomic, copy, nullable) NSString *backgroundImageUrl;
 
 @end
