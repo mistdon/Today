@@ -12,7 +12,7 @@
 
 @implementation TodayEvents
 
-@dynamic owner, title, contents, date, tag, group;
+@dynamic title, contents, recordDate, tag, group;
 
 RegisterAVObject
 
@@ -33,7 +33,7 @@ RegisterAVObject
 + (instancetype)eventWithTitle:(NSString *)title content:(NSString *)content{
     TodayEvents *event = [TodayEvents event];
     event.title = title;
-    event.date = [NSDate date];
+    event.recordDate = [NSDate date];
     return event;
 }
 @end
@@ -51,6 +51,7 @@ RegisterAVObject
 }
 + (NSArray<__kindof TodayEvents *> *)queryAllEvents{
     AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
+    [query includeKey:@"image"];
     NSArray *array =  [query findObjects];
     return array;
 }

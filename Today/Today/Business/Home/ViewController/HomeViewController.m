@@ -10,10 +10,13 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "Account.h"
 #import "TodayEvents.h"
-
+#import "BaseTableView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "HomeItemTableViewCell.h"
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet BaseTableView *tableView;
 @property (nonatomic) NSMutableArray<__kindof TodayEvents *> *lists;
+
 @end
 
 @implementation HomeViewController
@@ -27,7 +30,7 @@
     [super viewDidLoad];
     [self configureTabbar];
     // Do any additional setup after loading the view.
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HomeItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -35,15 +38,25 @@
     [self qureyEvventLists];
 }
 - (void)qureyEvventLists{
-    AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
-    //    [query whereKey:@"gender" equalTo:@"M"]; //查询指定key值的
-    NSArray *array =  [query findObjects];
-    for (Account *account in array) {
-        NSLog(@"name = %@",account.objectId);
-    }
-    NSLog(@"array = %lu",array.count);
+//    AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
+//    //    [query whereKey:@"gender" equalTo:@"M"]; //查询指定key值的
+//    [query includeKey:@"image"];
+//    NSArray *array =  [query findObjects];
+//    for (Account *account in array) {
+//        NSLog(@"name = %@",account.objectId);
+//    }
+//    NSLog(@"array = %lu",array.count);
+    
+    NSArray *arr = [TodayEvents queryAllEvents];
+////#if AV_IOS_ONLY
+////    NSLog(@"AV_IOS_ONLY");
+////
+////    [AVGeoPoint geoPointForCurrentLocationInBackground:^(AVGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
+////        NSLog(@"geoPoint = %@", geoPoint);
+////    }];
+//#endif
     [self.lists removeAllObjects];
-    [self.lists addObjectsFromArray:array];
+    [self.lists addObjectsFromArray:arr];
     [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -54,12 +67,13 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.lists.count;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    TodayEvents *today = self.lists[indexPath.row];
-    cell.textLabel.text = today.contents;
+    HomeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.todayEvents = self.lists[indexPath.row];
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150.f;
 }
 // MARK: - private method
 - (void)configureTabbar{

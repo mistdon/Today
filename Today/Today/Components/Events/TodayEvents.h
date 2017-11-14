@@ -16,26 +16,22 @@ NS_ASSUME_NONNULL_BEGIN
 //! 日记Item
 @interface TodayEvents : AVObject<AVSubclassing>
 
-@property (nonatomic, strong, readonly) Account *owner; //所有者
-
-@property (nonatomic, copy) NSString *title; //标题
-
-@property (nonatomic, copy) NSString *contents; //内容
-
-//@property (nonatomic, strong) NSDate *beginDate; //开始时间
-//
-//@property (nonatomic, strong) NSDate *endDate; //结束时间
-
-@property (nonatomic) NSDate *date;
-
-@property (nonatomic, strong, nullable) UIImage *image;
-
+//@property (nonatomic, strong, readonly) Account *owner; //所有者
+//! 文章标题
+@property (nonatomic, copy) NSString *title;
+//! 记录内容
+@property (nonatomic, copy) NSString *contents;
+//! 记录时间
+@property (nonatomic) NSDate *recordDate;
+//! 封面图片(最多为一张)
+@property (nonatomic, nullable) AVFile *image;
+//! 标签(为以后的标签查询做准备)
 @property (nonatomic, copy, nullable) NSString *tag; //标签
-
+//! 群组(日记群组,旅游群组)
 @property (nonatomic, copy, nullable) NSString *group; //群组
+//! 地址位置
+@property (nonatomic) AVGeoPoint *geoPoint;
 
-//! 背景图片
-@property (nonatomic, copy) NSString *backgroundPost;
 /*
  
  待定需求：
