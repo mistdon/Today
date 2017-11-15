@@ -7,15 +7,15 @@
 //
 
 #import "HomeItemTableViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-
+#import "SDConvenientFunc.h"
+#import <YYKit/UIView+YYAdd.h>
 
 @interface HomeItemTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+@property (weak, nonatomic) IBOutlet YYLabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 
 @end
@@ -24,6 +24,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.contentLabel.numberOfLines = 0;
+    self.contentLabel.font = font(15);
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,13 +34,16 @@
 
     // Configure the view for the selected state
 }
-- (void)setTodayEvents:(TodayEvents *)todayEvents{
-    _todayEvents = todayEvents;
-    self.titleLabel.text = todayEvents.title;
-    self.contentTextView.text = todayEvents.contents;
-    [self.postImageView sd_setImageWithURL:[NSURL URLWithString:todayEvents.image.url] placeholderImage:nil];
-    self.dateLabel.text = [todayEvents sd_formateCreateDateString];
-    self.locationLabel.text = todayEvents.locationStr;
+- (void)setLayout:(SDEventLayout *)layout{
+    _layout = layout;
+    self.contentView.height = layout.totalHeight;
+    [self bindData:layout.event];
+}
+- (void)bindData:(SDEventItem *)item{
+    self.titleLabel.text = item.title;
+    self.locationLabel.text = item.locationStr;
+    self.dateLabel.text = [item sd_formateCreateDateString];
+    self.contentLabel.text = item.contents;
 }
 
 @end

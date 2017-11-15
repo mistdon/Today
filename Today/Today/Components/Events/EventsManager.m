@@ -7,7 +7,7 @@
 //
 
 #import "EventsManager.h"
-#import "TodayEvents.h"
+#import "SDEventItem.h"
 
 #import "NSDate+events.h"    //deleteing...
 
@@ -22,20 +22,20 @@
     });
     return  instance;
 }
-- (BOOL)addEvent:(TodayEvents *)event{
+- (BOOL)addEvent:(SDEventItem *)event{
     if (event == nil) return NO;
     return [event save];
 }
 
-- (BOOL)deleteEvent:(TodayEvents *)event{
+- (BOOL)deleteEvent:(SDEventItem *)event{
     if (event == nil)return NO;
     return YES;
 }
-- (BOOL)editEvent:(TodayEvents *)event{
+- (BOOL)editEvent:(SDEventItem *)event{
     return YES;
 }
 
-- (NSArray<__kindof TodayEvents *> *)queryEventsByPara:(NSDictionary *)parameters{
+- (NSArray<__kindof SDEventItem *> *)queryEventsByPara:(NSDictionary *)parameters{
    return nil;
 }
 @end

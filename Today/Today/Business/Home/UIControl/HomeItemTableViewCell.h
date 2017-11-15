@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TodayEvents.h"
+//#import "TodayEvents.h"
+#import "SDEventLayout.h"
 
 @interface HomeItemTableViewCell : UITableViewCell
 
-@property (nonatomic) TodayEvents *todayEvents;
+@property (nonatomic) SDEventLayout *layout;
 
 @end

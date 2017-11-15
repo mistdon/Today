@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "SDEventItem.h"
 
 @interface WritingViewController : BaseViewController
+
+//! 如果有值,就是编辑; 没有值,就是新加
+@property (nonatomic, nullable) SDEventItem *eventItem;
 
 @end

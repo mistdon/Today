@@ -29,6 +29,7 @@
     self.backgroundColor = [UIColor clearColor];
     self.tableHeaderView = [UIView new];
     self.tableFooterView = [UIView new];
+    self.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 @end

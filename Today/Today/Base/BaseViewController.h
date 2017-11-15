@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-UIKIT_EXTERN NSString *const KTempBackgroundUrl;
+#import "UIImageView+SDImageManagerHelper.h"
 
 @interface BaseViewController : UIViewController
 

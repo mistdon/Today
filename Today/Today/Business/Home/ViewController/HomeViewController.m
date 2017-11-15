@@ -9,30 +9,33 @@
 #import "HomeViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "Account.h"
-#import "TodayEvents.h"
+#import "SDEventLayout.h"
 #import "BaseTableView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "HomeItemTableViewCell.h"
+
+#import "WritingViewController.h"
+
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet BaseTableView *tableView;
-@property (nonatomic) NSMutableArray<__kindof TodayEvents *> *lists;
+@property (nonatomic) NSMutableArray<__kindof SDEventLayout *> *layoutLists;
 
 @end
 
 @implementation HomeViewController
-- (NSMutableArray<__kindof TodayEvents *> *)lists{
-    if(!_lists){
-        _lists = [NSMutableArray new];
+- (NSMutableArray<__kindof SDEventLayout *> *)layoutLists{
+    if(!_layoutLists){
+        _layoutLists = [NSMutableArray new];
     }
-    return _lists;
+    return _layoutLists;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setBackgroundImageUrl:KTempBackgroundUrl];
-    [self configureTabbar];
-    // Do any additional setup after loading the view.
+    [self setupUI];
+}
+- (void)setupUI{
+    [self setBackgroundImageUrl:KDefaultBackgroundImageUrl];
+    self.tableView.separatorInset = UIEdgeInsetsMake(5, 5, 5, 5);
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -48,10 +51,12 @@
 //    }
 //    NSLog(@"array = %lu",array.count);
     
-    NSArray *arr = [TodayEvents queryAllEvents];
-
-    [self.lists removeAllObjects];
-    [self.lists addObjectsFromArray:arr];
+    NSArray *arr = [SDEventItem queryAllEvents];
+    [self.layoutLists removeAllObjects];
+    for (SDEventItem *item in arr) {
+        SDEventLayout *layout = [[SDEventLayout alloc] initWithTodayEvents:item];
+        [self.layoutLists addObject:layout];
+    }
     [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning {
@@ -60,19 +65,22 @@
 }
 // MARK: - UITableView datasource and delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.lists.count;
+    return self.layoutLists.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HomeItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.todayEvents = self.lists[indexPath.row];
+    cell.layout = self.layoutLists[indexPath.row];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    WritingViewController *write = [WritingViewController new];
+    WritingViewController *writing = (WritingViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WritingViewController"];
+    writing.eventItem = self.layoutLists[indexPath.row].event;
+    [self.navigationController showViewController:writing sender:nil];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150.f;
+    NSLog(@"row = %ld, totalHeight = %lf", indexPath.row, self.layoutLists[indexPath.row].totalHeight);
+    return self.layoutLists[indexPath.row].totalHeight;
 }
-// MARK: - private method
-- (void)configureTabbar{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor lightGrayColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
-}
+
 @end

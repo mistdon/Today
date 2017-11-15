@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import <Masonry/Masonry.h>
-#import <SDWebImage/UIImageView+WebCache.h>
-NSString *const KTempBackgroundUrl = @"http://img.ivsky.com/img/tupian/pre/201012/25/suse_zhiwen.jpg";
+
+#import "UIImageView+SDImageManagerHelper.h"
+
 @interface BaseViewController ()
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @end
@@ -38,7 +39,7 @@ NSString *const KTempBackgroundUrl = @"http://img.ivsky.com/img/tupian/pre/20101
 }
 - (void)setBackgroundImageUrl:(NSString *)backgroundImageUrl{
     _backgroundImageUrl = backgroundImageUrl;
-     [self.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:backgroundImageUrl]];
+    [self.backgroundImageView sd_setImageWithUrlString:backgroundImageUrl];
 }
 
 @end

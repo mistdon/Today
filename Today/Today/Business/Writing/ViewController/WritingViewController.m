@@ -7,10 +7,9 @@
 //
 
 #import "WritingViewController.h"
-#import "TodayEvents.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "SDEventItem.h"
 #import "SDLocationService.h"
-
+#import "UIImageView+SDImageManagerHelper.h"
 
 @interface WritingViewController ()<CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -23,15 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.backgroundImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img.ivsky.com/img/tupian/pre/201012/25/suse_zhiwen.jpg"]];
+    [self.backgroundImageView sd_setImageWithUrlString:nil];
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(completeAction:)];
     self.navigationItem.rightBarButtonItem = done;
 
     [[SDLocationService sharedSerice] requesetLocaion];
+    
+    if (self.eventItem) {
+        self.contentView.text = self.eventItem.contents;
+    }
 }
 
 - (void)completeAction:(id)sender{
-    TodayEvents *today = [TodayEvents event];
+    SDEventItem *today = [SDEventItem event];
     [today setObject:@"读书" forKey:@"title"];
     [today setObject:self.contentView.text forKey:@"contents"];
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"github" ofType:@"jpeg"]];

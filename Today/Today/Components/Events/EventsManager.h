@@ -10,19 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TodayEvents;
+@class SDEventItem;
 
 @interface EventsManager : NSObject
 
 + (instancetype)sharedInstance;
 
-- (BOOL)addEvent:(TodayEvents *)event;
+- (BOOL)addEvent:(SDEventItem *)event;
 
-- (BOOL)deleteEvent:(TodayEvents *)event;
+- (BOOL)deleteEvent:(SDEventItem *)event;
 
-- (BOOL)editEvent:(TodayEvents *)event;
+- (BOOL)editEvent:(SDEventItem *)event;
 
-- (NSArray<__kindof TodayEvents *> *)queryEventsByPara:(NSDictionary *)parameters;
+- (NSArray<__kindof SDEventItem *> *)queryEventsByPara:(NSDictionary *)parameters;
 
 @end
 

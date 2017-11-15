@@ -12,7 +12,7 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 #import <DateTools/DateTools.h>
-#import "TodayEvents.h"
+#import "SDEventItem.h"
 #import "NSDate+events.h"
 
 @interface ViewController ()
@@ -86,7 +86,7 @@
 }
 #pragma mark - Events
 - (IBAction)addEvents:(id)sender {
-    TodayEvents *today = [TodayEvents event];
+    SDEventItem *today = [SDEventItem event];
     [today setObject:@"读书" forKey:@"title"];
     [today setObject:@"科技想要什么，凯文凯利" forKey:@"contents"];
     [today setObject:[NSDate today]  forKey:@"beginDate"];
@@ -113,9 +113,9 @@
 //            NSLog(@"begin =%@, end = %@",events.beginDate, events.endDate);
 //    }];
     //查询今天的事件
-    AVQuery *startQueryDate = [TodayEvents query];
+    AVQuery *startQueryDate = [SDEventItem query];
     [startQueryDate whereKey:@"beginDate" greaterThan:[NSDate today]];
-    AVQuery *endQueryDate = [TodayEvents query];
+    AVQuery *endQueryDate = [SDEventItem query];
     [endQueryDate whereKey:@"endDate" lessThan:[[NSDate today] dateByAddingDays:1]];
     AVQuery *query = [AVQuery andQueryWithSubqueries:[NSArray arrayWithObjects:startQueryDate, endQueryDate, nil]];
     
@@ -128,7 +128,7 @@
     
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        TodayEvents *events = objects.firstObject;
+        SDEventItem *events = objects.firstObject;
 //        NSLog(@"begin =%@, end = %@",events.beginDate, events.endDate);
     }];
 }
