@@ -13,9 +13,12 @@
 #import "BaseTableView.h"
 #import "HomeItemTableViewCell.h"
 
+
 #import "WritingViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SDToast.h"
+
+#import <SDViewHelper/UIViewController+VCLoader.h>
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet BaseTableView *tableView;
@@ -91,5 +94,8 @@
     NSLog(@"row = %ld, totalHeight = %lf", indexPath.row, self.layoutLists[indexPath.row].totalHeight);
     return self.layoutLists[indexPath.row].totalHeight;
 }
-
+- (IBAction)settingActioon:(id)sender {
+    UIViewController *vc = [UIViewController sd_viewController:@"SDLoginViewController" inStoryboard:@"Login" arguments:nil];
+    [self presentViewController:vc animated:YES completion:NULL];
+}
 @end

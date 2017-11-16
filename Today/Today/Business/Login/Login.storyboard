@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="dek-kR-D0Z">
+            <objects>
+                <viewController storyboardIdentifier="SDLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6P-bn-2q5" customClass="SDLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afr-9P-Dxg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9f-zH-6fG">
+                                <rect key="frame" x="162.5" y="309" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B9f-zH-6fG" secondAttribute="height" multiplier="1:1" id="jyi-AN-4QV"/>
+                                    <constraint firstAttribute="width" constant="50" id="tsS-tD-Ntz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="weixin"/>
+                                <connections>
+                                    <action selector="wxLoginAction:" destination="Y6P-bn-2q5" eventType="touchUpInside" id="kXZ-2E-hhM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B9f-zH-6fG" firstAttribute="centerX" secondItem="Afr-9P-Dxg" secondAttribute="centerX" id="3LT-ia-oWg"/>
+                            <constraint firstItem="B9f-zH-6fG" firstAttribute="centerY" secondItem="Afr-9P-Dxg" secondAttribute="centerY" id="5AU-rh-0CM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sgO-ds-n7E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkD-5w-cKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="-317"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weixin" width="24" height="24"/>
+    </resources>
+</document>
