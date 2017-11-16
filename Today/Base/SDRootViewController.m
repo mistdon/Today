@@ -37,7 +37,7 @@
 }
 // MARK: - private method
 + (void)configureNaviBar{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor lightGrayColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor lightGrayColor]];
+//    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
 }
 @end

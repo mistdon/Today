@@ -1,42 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2u2-JL-d3Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2u2-JL-d3Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
-        <scene sceneID="uu0-zC-308">
-            <objects>
-                <viewControllerPlaceholder id="Wbq-PJ-TVh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XAi-0S-f1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1112" y="192"/>
-        </scene>
-        <!--Writing View Controller-->
-        <scene sceneID="F6K-R9-dvL">
-            <objects>
-                <viewController storyboardIdentifier="WritingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cmb-ft-UwK" customClass="WritingViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CRg-JH-rog"/>
-                        <viewControllerLayoutGuide type="bottom" id="Sid-Xb-xlh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="t5v-bl-SV2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u4L-jj-qjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-426" y="-452"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -183,9 +155,6 @@
                                     <constraint firstAttribute="height" constant="50" id="vkQ-rY-bK0"/>
                                 </constraints>
                                 <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="Cmb-ft-UwK" kind="show" id="BmQ-Cw-f81"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

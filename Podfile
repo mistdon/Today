@@ -31,7 +31,7 @@ target 'Today' do
   pod 'SVProgressHUD'
 
   pod 'LeanCloudSocial'         
-  
+  pod 'SDViewHelper'
 
   pod 'DateTools', '~> 2.0.0'
   pod 'MLeaksFinder', '~> 0.2.1'

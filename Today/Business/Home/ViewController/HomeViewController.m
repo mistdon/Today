@@ -17,6 +17,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SDToast.h"
 
+
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet BaseTableView *tableView;
 @property (nonatomic) NSMutableArray<__kindof SDEventLayout *> *layoutLists;
@@ -83,7 +84,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    WritingViewController *writing = (WritingViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WritingViewController"];
+    WritingViewController *writing = [WritingViewController new];
     writing.eventItem = self.layoutLists[indexPath.row].event;
     [self.navigationController showViewController:writing sender:nil];
 }

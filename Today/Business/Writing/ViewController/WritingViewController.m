@@ -17,7 +17,6 @@
 #import "SDToast.h"
 
 @interface WritingViewController ()<CLLocationManagerDelegate, YYKeyboardObserver, YYTextViewDelegate>
-//@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic) YYTextView *textView;
 @property (nonatomic) YYKeyboardManager *manager;
 
@@ -29,10 +28,9 @@
     [super viewDidLoad];
     [[YYKeyboardManager defaultManager] addObserver:self];
     // Do any additional setup after loading the view.
-//    [self.backgroundImageView sd_setImageWithUrlString:nil];
+    self.backgroundImageUrl = KDefaultBackgroundImageUrl;
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(completeAction:)];
     self.navigationItem.rightBarButtonItem = done;
-//    self.textView.editable = (self.eventItem == nil);
     self.textView.placeholderText = @"今天发生什么有趣的事情了?";
     self.textView.delegate = self;
     [[SDLocationService sharedSerice] requesetLocaion];
@@ -40,21 +38,21 @@
     if (self.eventItem) {
         self.textView.text = [self.eventItem.contents stringByAppendingString:self.eventItem.contents ];
     }
-    @weakify(self);
-    [RACObserve(self.textView, isEditable) subscribeNext:^(id x) {
-        @strongify(self);
-        
-    }];
     [self setupKeyboardManager];
     [self.view addSubview:self.textView];
 }
 - (YYTextView *)textView{
     if(!_textView){
         _textView = [YYTextView new];
-        _textView.size = CGSizeMake(self.view.size.width, self.view.size.height);
+        _textView.frame = CGRectMake(5, 5, 5, 5);
+        _textView.size = CGSizeMake(self.view.size.width-50, self.view.size.height-10);
+        _textView.contentSize = CGSizeMake(self.view.size.width-1000, self.view.size.height-10);
+        _textView.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
+        _textView.backgroundColor = [UIColor greenColor];
         _textView.contentInset = UIEdgeInsetsMake(12, 16, 12, 16);
         _textView.alwaysBounceVertical = YES;
-//        _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _textView.alwaysBounceHorizontal = NO;
+        _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _textView.delegate = self;
     }
     return _textView;
@@ -62,7 +60,6 @@
 - (void)completeAction:(id)sender{
     UIBarButtonItem *item = (UIBarButtonItem *)sender;
     item.title = self.textView.editable ? @"Done" : @"Edit";
-    
     if(self.eventItem)return;
     SDEventItem *today = [SDEventItem event];
     [today setObject:@"读书" forKey:@"title"];
