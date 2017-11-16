@@ -38,6 +38,8 @@
 		3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5101E6410E300223E49 /* EventsManager.m */; };
 		3BF1C5141E642DC900223E49 /* EventGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5131E642DC900223E49 /* EventGroupManager.m */; };
 		3BF1C5181E64353100223E49 /* APNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5171E64353100223E49 /* APNDispatcher.m */; };
+		3BF744101FBD293900280885 /* SDToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7440F1FBD293900280885 /* SDToast.m */; };
+		3BF744131FBD2FB000280885 /* UIColor+SDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF744121FBD2FB000280885 /* UIColor+SDColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +113,10 @@
 		3BF1C5131E642DC900223E49 /* EventGroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGroupManager.m; sourceTree = "<group>"; };
 		3BF1C5161E64353100223E49 /* APNDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNDispatcher.h; sourceTree = "<group>"; };
 		3BF1C5171E64353100223E49 /* APNDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNDispatcher.m; sourceTree = "<group>"; };
+		3BF7440E1FBD293900280885 /* SDToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDToast.h; sourceTree = "<group>"; };
+		3BF7440F1FBD293900280885 /* SDToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDToast.m; sourceTree = "<group>"; };
+		3BF744111FBD2FB000280885 /* UIColor+SDColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SDColor.h"; sourceTree = "<group>"; };
+		3BF744121FBD2FB000280885 /* UIColor+SDColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SDColor.m"; sourceTree = "<group>"; };
 		4F985833723EC562DBA20D86 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61A3E2FC4B01B23A0E8E85 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		FF5F3C538B926C3EDB7CEA8A /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +319,8 @@
 				3BD0582B1E5BE83D00C891E4 /* LeanCloud */,
 				3B415EAB1FBC0C1B0079B9AB /* SDConvenientFunc.h */,
 				3B415EAC1FBC0C1B0079B9AB /* SDConvenientFunc.m */,
+				3BF7440E1FBD293900280885 /* SDToast.h */,
+				3BF7440F1FBD293900280885 /* SDToast.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -378,6 +386,8 @@
 				3BD0583C1E5C31E200C891E4 /* NSDate+events.m */,
 				3B415EA51FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.h */,
 				3B415EA61FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m */,
+				3BF744111FBD2FB000280885 /* UIColor+SDColor.h */,
+				3BF744121FBD2FB000280885 /* UIColor+SDColor.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -536,6 +546,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh",
 				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -563,12 +574,14 @@
 				3BD0580B1E5BE1CB00C891E4 /* AppDelegate.m in Sources */,
 				3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */,
 				3BD058251E5BE46400C891E4 /* AccountConfiguration.m in Sources */,
+				3BF744131FBD2FB000280885 /* UIColor+SDColor.m in Sources */,
 				3BD0582E1E5BE84B00C891E4 /* LeanCloud.m in Sources */,
 				3B415EB01FBC0C790079B9AB /* SDRootViewController.m in Sources */,
 				3B415EAA1FBC025A0079B9AB /* SDEventLayout.m in Sources */,
 				3BC233231FBAFC6000FF0A1D /* SDLocationService.m in Sources */,
 				3B0F89181FB568EF00DB8014 /* HomeViewController.m in Sources */,
 				3B0F891C1FB56AC300DB8014 /* BaseViewController.m in Sources */,
+				3BF744101FBD293900280885 /* SDToast.m in Sources */,
 				3B415EAD1FBC0C1B0079B9AB /* SDConvenientFunc.m in Sources */,
 				3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */,
 				3BD058081E5BE1CB00C891E4 /* main.m in Sources */,

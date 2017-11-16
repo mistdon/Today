@@ -14,6 +14,8 @@
 #import "HomeItemTableViewCell.h"
 
 #import "WritingViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "SDToast.h"
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet BaseTableView *tableView;
@@ -31,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    [self qureyEvventLists];
 }
 - (void)setupUI{
     [self setBackgroundImageUrl:KDefaultBackgroundImageUrl];
@@ -39,7 +42,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self qureyEvventLists];
+   
 }
 - (void)qureyEvventLists{
 //    AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
@@ -50,14 +53,21 @@
 //        NSLog(@"name = %@",account.objectId);
 //    }
 //    NSLog(@"array = %lu",array.count);
-    
-    NSArray *arr = [SDEventItem queryAllEvents];
-    [self.layoutLists removeAllObjects];
-    for (SDEventItem *item in arr) {
-        SDEventLayout *layout = [[SDEventLayout alloc] initWithTodayEvents:item];
-        [self.layoutLists addObject:layout];
-    }
-    [self.tableView reloadData];
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        NSArray *arr = [SDEventItem queryAllEvents];
+        [self.layoutLists removeAllObjects];
+        for (SDEventItem *item in arr) {
+            SDEventLayout *layout = [[SDEventLayout alloc] initWithTodayEvents:item maxTextRow:3];
+            
+            [self.layoutLists addObject:layout];
+        };
+        dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self);
+            [self.tableView reloadData];
+        });
+    });
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,7 +83,6 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    WritingViewController *write = [WritingViewController new];
     WritingViewController *writing = (WritingViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WritingViewController"];
     writing.eventItem = self.layoutLists[indexPath.row].event;
     [self.navigationController showViewController:writing sender:nil];

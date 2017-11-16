@@ -28,38 +28,10 @@
                     <view key="view" contentMode="scaleToFill" id="t5v-bl-SV2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUR-HY-RNY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ss6-LN-hay">
-                                <rect key="frame" x="10" y="84" width="355" height="300"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="hIF-Dp-eIi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ss6-LN-hay" secondAttribute="trailing" constant="10" id="2nf-co-zK8"/>
-                            <constraint firstItem="Ss6-LN-hay" firstAttribute="leading" secondItem="t5v-bl-SV2" secondAttribute="leading" constant="10" id="40Y-wq-ydw"/>
-                            <constraint firstItem="Ss6-LN-hay" firstAttribute="top" secondItem="CRg-JH-rog" secondAttribute="bottom" constant="20" id="C27-t8-LNK"/>
-                            <constraint firstAttribute="trailing" secondItem="IUR-HY-RNY" secondAttribute="trailing" id="M4t-iu-MJq"/>
-                            <constraint firstItem="Sid-Xb-xlh" firstAttribute="top" secondItem="IUR-HY-RNY" secondAttribute="bottom" id="NBZ-Q5-M9b"/>
-                            <constraint firstItem="IUR-HY-RNY" firstAttribute="leading" secondItem="t5v-bl-SV2" secondAttribute="leading" id="aEa-XI-iKL"/>
-                            <constraint firstItem="IUR-HY-RNY" firstAttribute="top" secondItem="CRg-JH-rog" secondAttribute="bottom" id="n51-r6-KTg"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="backgroundImageView" destination="IUR-HY-RNY" id="reP-FA-k3Y"/>
-                        <outlet property="contentView" destination="Ss6-LN-hay" id="3bL-H6-354"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4L-jj-qjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
