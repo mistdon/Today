@@ -200,11 +200,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lXQ-p0-nf6">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="s3l-FD-W8x">
-                            <connections>
-                                <action selector="settingActioon:" destination="GnA-jN-wNM" id="jqA-hK-LIq"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="s3l-FD-W8x"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="29P-cg-qac" id="fJU-g1-qrQ"/>
