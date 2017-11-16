@@ -12,10 +12,15 @@
 		3B0F891C1FB56AC300DB8014 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891B1FB56AC300DB8014 /* BaseViewController.m */; };
 		3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */; };
 		3B32E6CD1FBB3E36001FC11B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B32E6CC1FBB3E36001FC11B /* README.md */; };
+<<<<<<< HEAD
 		3B415EA71FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EA61FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m */; };
 		3B415EAA1FBC025A0079B9AB /* SDEventLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EA91FBC025A0079B9AB /* SDEventLayout.m */; };
 		3B415EAD1FBC0C1B0079B9AB /* SDConvenientFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EAC1FBC0C1B0079B9AB /* SDConvenientFunc.m */; };
 		3B415EB01FBC0C790079B9AB /* SDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EAF1FBC0C790079B9AB /* SDRootViewController.m */; };
+=======
+		3B7F8A441FBC868700D5C3E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F8A431FBC868700D5C3E5 /* Login.storyboard */; };
+		3B7F8A471FBC86A000D5C3E5 /* SDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F8A461FBC86A000D5C3E5 /* SDLoginViewController.m */; };
+>>>>>>> login
 		3BC233151FBAD5BF00FF0A1D /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC233141FBAD5BF00FF0A1D /* BaseTableView.m */; };
 		3BC2331E1FBAEDB800FF0A1D /* HomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2331C1FBAEDB800FF0A1D /* HomeItemTableViewCell.m */; };
 		3BC2331F1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2331D1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib */; };
@@ -63,6 +68,7 @@
 		3B0F891D1FB56AEA00DB8014 /* WritingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritingViewController.h; sourceTree = "<group>"; };
 		3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingViewController.m; sourceTree = "<group>"; };
 		3B32E6CC1FBB3E36001FC11B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		3B415EA51FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageManagerHelper.h"; sourceTree = "<group>"; };
 		3B415EA61FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageManagerHelper.m"; sourceTree = "<group>"; };
 		3B415EA81FBC025A0079B9AB /* SDEventLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDEventLayout.h; sourceTree = "<group>"; };
@@ -71,6 +77,11 @@
 		3B415EAC1FBC0C1B0079B9AB /* SDConvenientFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDConvenientFunc.m; sourceTree = "<group>"; };
 		3B415EAE1FBC0C790079B9AB /* SDRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDRootViewController.h; sourceTree = "<group>"; };
 		3B415EAF1FBC0C790079B9AB /* SDRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDRootViewController.m; sourceTree = "<group>"; };
+=======
+		3B7F8A431FBC868700D5C3E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3B7F8A451FBC86A000D5C3E5 /* SDLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLoginViewController.h; sourceTree = "<group>"; };
+		3B7F8A461FBC86A000D5C3E5 /* SDLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLoginViewController.m; sourceTree = "<group>"; };
+>>>>>>> login
 		3BC233131FBAD5BF00FF0A1D /* BaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		3BC233141FBAD5BF00FF0A1D /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		3BC2331B1FBAEDB800FF0A1D /* HomeItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeItemTableViewCell.h; sourceTree = "<group>"; };
@@ -137,6 +148,7 @@
 		3B0F890B1FB5689A00DB8014 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				3B7F8A421FBC865B00D5C3E5 /* Login */,
 				3B0F890C1FB568D600DB8014 /* Home */,
 				3B0F89111FB568D600DB8014 /* Writing */,
 			);
@@ -241,6 +253,16 @@
 				3B415EAF1FBC0C790079B9AB /* SDRootViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		3B7F8A421FBC865B00D5C3E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3B7F8A431FBC868700D5C3E5 /* Login.storyboard */,
+				3B7F8A451FBC86A000D5C3E5 /* SDLoginViewController.h */,
+				3B7F8A461FBC86A000D5C3E5 /* SDLoginViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		3BC233201FBAF42200FF0A1D /* Location */ = {
@@ -494,6 +516,7 @@
 			files = (
 				3B32E6CD1FBB3E36001FC11B /* README.md in Resources */,
 				3BC2331F1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib in Resources */,
+				3B7F8A441FBC868700D5C3E5 /* Login.storyboard in Resources */,
 				3BD058161E5BE1CB00C891E4 /* LaunchScreen.storyboard in Resources */,
 				3BD058131E5BE1CB00C891E4 /* Assets.xcassets in Resources */,
 				3BD0583F1E5C45A800C891E4 /* github.jpeg in Resources */,
@@ -589,6 +612,7 @@
 				3BD058321E5BF88600C891E4 /* SDEventItem.m in Sources */,
 				3B415EA71FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m in Sources */,
 				3BF1C4F81E640CDC00223E49 /* AddEventsViewController.m in Sources */,
+				3B7F8A471FBC86A000D5C3E5 /* SDLoginViewController.m in Sources */,
 				3BD058291E5BE52F00C891E4 /* AccountService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
