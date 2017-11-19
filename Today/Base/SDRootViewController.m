@@ -7,6 +7,7 @@
 //
 
 #import "SDRootViewController.h"
+#import "UIColor+SDColor.h"
 
 @interface SDRootViewController ()
 
@@ -37,7 +38,7 @@
 }
 // MARK: - private method
 + (void)configureNaviBar{
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor lightGrayColor]];
-//    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor sd_mainThemeColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor sd_mainThemeColor]];
 }
 @end

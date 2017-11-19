@@ -18,4 +18,8 @@ UIColor *HexColorAlpha(NSString *hexStr, CGFloat alpha){
 
 @implementation UIColor (SDColor)
 
++ (UIColor *)sd_mainThemeColor{
+    return HexColor(@"#15b7b9");
+}
+
 @end

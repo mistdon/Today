@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LeanCloud.h"
-
+#import "HomeViewController.h"
+#import "SDRootViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +20,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
     [LeanCloud setupLeanCloud];
-
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    SDRootViewController *root = [[SDRootViewController alloc] initWithRootViewController:[HomeViewController new]];
+    self.window.rootViewController = root;
+    [self.window makeKeyWindow];
     
     
     

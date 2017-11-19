@@ -12,19 +12,38 @@
 #import "SDEventLayout.h"
 #import "BaseTableView.h"
 #import "HomeItemTableViewCell.h"
+#import "SDAdView.h"
 
 #import "WritingViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
 #import "SDToast.h"
-
+#import "SDConvenientFunc.h"
 
 @interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet BaseTableView *tableView;
+@property (nonatomic) BaseTableView *tableView;
+@property (nonatomic, weak) SDAdView *adView;
 @property (nonatomic) NSMutableArray<__kindof SDEventLayout *> *layoutLists;
 
 @end
 
 @implementation HomeViewController
+- (BaseTableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[BaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource =  self;
+        SDAdView *ad = [[SDAdView alloc] initWithFrame:CGRectMake(0, 0, 0, 60)];
+        self.adView = ad;
+        [self.view addSubview:_tableView];
+        [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+            make.bottom.and.leading.trailing.equalTo(self.view);
+        }];
+//        _tableView.tableHeaderView = self.adView;
+    }
+    return _tableView;
+}
 - (NSMutableArray<__kindof SDEventLayout *> *)layoutLists{
     if(!_layoutLists){
         _layoutLists = [NSMutableArray new];
@@ -35,11 +54,13 @@
     [super viewDidLoad];
     [self setupUI];
     [self qureyEvventLists];
+    self.navigationItem.title = @"小手记";
 }
 - (void)setupUI{
     [self setBackgroundImageUrl:KDefaultBackgroundImageUrl];
-    self.tableView.separatorInset = UIEdgeInsetsMake(5, 5, 5, 5);
+//    self.tableView.separatorInset = UIEdgeInsetsMake(5, 5, 5, 5);
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.adView setupUrl:@"https://img1.doubanio.com/view/photo/m/public/p2154876548.webp"];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
