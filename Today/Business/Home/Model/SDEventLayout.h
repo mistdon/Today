@@ -53,6 +53,16 @@ typedef NS_ENUM(NSUInteger, SDEventLayoutType){
 @property (nonatomic, assign) CGFloat paddingBottom; //文本底部留白
 @property (nonatomic, assign) CGFloat lineHeightMultiple; //行距倍数
 
+/**
+ 默认位置管理器
+ font:                       Name:"Heiti SC" size:17
+ paddingTop, paddingBottom : 12
+ lineHeightMultiple        : 1.5
+
+ @return 默认值
+ */
++ (SDEventLinePositionModifier *)defaultPositionModifier;
+
 - (CGFloat)heightForLineCount:(NSUInteger)lineCount;
 
 @end

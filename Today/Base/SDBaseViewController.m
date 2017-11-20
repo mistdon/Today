@@ -6,16 +6,16 @@
 //  Copyright © 2017年 shendong. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "SDBaseViewController.h"
 #import <Masonry/Masonry.h>
 
 #import "UIImageView+SDImageManagerHelper.h"
 
-@interface BaseViewController ()
+@interface SDBaseViewController ()
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @end
 
-@implementation BaseViewController
+@implementation SDBaseViewController
 - (UIImageView *)backgroundImageView{
     if(!_backgroundImageView){
         _backgroundImageView = [[UIImageView alloc] init];

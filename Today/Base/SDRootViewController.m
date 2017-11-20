@@ -7,8 +7,11 @@
 //
 
 #import "SDRootViewController.h"
+#import "SDHomeViewController.h"
 #import "UIColor+SDColor.h"
-
+SDRootViewController * SDRootVC(void){
+    return [SDRootViewController rootViewController];
+}
 @interface SDRootViewController ()
 
 @end
@@ -16,12 +19,7 @@
 @implementation SDRootViewController
 
 + (SDRootViewController *)rootViewController{
-    static SDRootViewController *root;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        root = [SDRootViewController new];
-    });
-    return root;
+    return (SDRootViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
 }
 + (void)initialize{
     [self configureNaviBar];
@@ -39,6 +37,6 @@
 // MARK: - private method
 + (void)configureNaviBar{
     [[UINavigationBar appearance] setBarTintColor:[UIColor sd_mainThemeColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor sd_mainThemeColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 @end

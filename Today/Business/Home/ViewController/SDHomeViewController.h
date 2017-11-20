@@ -6,8 +6,8 @@
 //  Copyright © 2017年 shendong. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "SDBaseViewController.h"
 
-@interface HomeViewController : BaseViewController
+@interface SDHomeViewController : SDBaseViewController
 
 @end

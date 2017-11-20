@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDViewHelper/UIViewController+VCLoader.h>
+
+@class SDRootViewController;
+
+FOUNDATION_EXPORT SDRootViewController *SDRootVC(void);
 
 @interface SDRootViewController : UINavigationController
 
-@property (class, nonatomic, readonly) SDRootViewController *rootViewController;
++ (SDRootViewController *)rootViewController;
 
 @end

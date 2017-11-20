@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LeanCloud.h"
-#import "HomeViewController.h"
+#import "SDHomeViewController.h"
 #import "SDRootViewController.h"
 @interface AppDelegate ()
 
@@ -24,9 +24,10 @@
     [LeanCloud setupLeanCloud];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    SDRootViewController *root = [[SDRootViewController alloc] initWithRootViewController:[HomeViewController new]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    SDRootViewController *root = [[SDRootViewController alloc] initWithRootViewController:[SDHomeViewController new]];
     self.window.rootViewController = root;
-    [self.window makeKeyWindow];
+    [self.window makeKeyAndVisible];
     
     
     

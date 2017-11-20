@@ -6,7 +6,7 @@
 //  Copyright © 2017年 shendong. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "SDHomeViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "Account.h"
 #import "SDEventLayout.h"
@@ -19,15 +19,24 @@
 #import <Masonry/Masonry.h>
 #import "SDToast.h"
 #import "SDConvenientFunc.h"
+#import "UIColor+SDColor.h"
 
-@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface SDHomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) BaseTableView *tableView;
 @property (nonatomic, weak) SDAdView *adView;
 @property (nonatomic) NSMutableArray<__kindof SDEventLayout *> *layoutLists;
-
+@property (nonatomic) UIButton *addButton;
 @end
 
-@implementation HomeViewController
+@implementation SDHomeViewController
+- (UIButton *)addButton{
+    if (!_addButton) {
+        _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _addButton.backgroundColor = [UIColor sd_mainThemeColor];
+        [_addButton addTarget:self action:@selector(addNewItem:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addButton;
+}
 - (BaseTableView *)tableView{
     if (!_tableView) {
         _tableView = [[BaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -58,23 +67,20 @@
 }
 - (void)setupUI{
     [self setBackgroundImageUrl:KDefaultBackgroundImageUrl];
-//    self.tableView.separatorInset = UIEdgeInsetsMake(5, 5, 5, 5);
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeItemTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.adView setupUrl:@"https://img1.doubanio.com/view/photo/m/public/p2154876548.webp"];
+    
+    [self.view addSubview:self.addButton];
+    [self.addButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.bottom.equalTo(self.view).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(50, 50));
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
    
 }
 - (void)qureyEvventLists{
-//    AVQuery *query = [AVQuery queryWithClassName:@"TodayEvents"];
-//    //    [query whereKey:@"gender" equalTo:@"M"]; //查询指定key值的
-//    [query includeKey:@"image"];
-//    NSArray *array =  [query findObjects];
-//    for (Account *account in array) {
-//        NSLog(@"name = %@",account.objectId);
-//    }
-//    NSLog(@"array = %lu",array.count);
     @weakify(self);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         @strongify(self);
@@ -105,13 +111,17 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    WritingViewController *writing = [WritingViewController new];
-    writing.eventItem = self.layoutLists[indexPath.row].event;
-    [self.navigationController showViewController:writing sender:nil];
+//    WritingViewController *writing = [WritingViewController new];
+//    writing.eventItem = self.layoutLists[indexPath.row].event;
+    [self.navigationController showViewController:SDWriteNavi(self.layoutLists[indexPath.row].event) sender:nil];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"row = %ld, totalHeight = %lf", indexPath.row, self.layoutLists[indexPath.row].totalHeight);
     return self.layoutLists[indexPath.row].totalHeight;
 }
-
+- (void)addNewItem:(id)sender{
+    WritingViewController *writing = [WritingViewController new];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:writing];
+    [self presentViewController:navi animated:YES completion:NULL];
+}
 @end

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImageView+SDImageManagerHelper.h"
+#import "SDRootViewController.h"
 
-@interface BaseViewController : UIViewController
+@interface SDBaseViewController : UIViewController
 
 @property (nonatomic, copy, nullable) NSString *backgroundImageUrl;
 

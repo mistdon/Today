@@ -49,7 +49,7 @@ CGFloat const KCellPaddingText = 10;
     
     YYTextContainer *container = [YYTextContainer new];
     container.linePositionModifier = modifier;
-    container.size = CGSizeMake(screen_width() - 10 - _padding * 2, CGFLOAT_MAX);
+    container.size = CGSizeMake(screen_width() - 50 - 5 - _padding * 2, CGFLOAT_MAX);
     container.maximumNumberOfRows = 0;
     _textLayout = [YYTextLayout layoutWithContainer:container text:att];
     if (!_textLayout) return;
@@ -87,6 +87,15 @@ CGFloat const KCellPaddingText = 10;
     modifier->_paddingTop = _paddingTop;
     modifier->_paddingBottom = _paddingBottom;
     modifier->_lineHeightMultiple = _lineHeightMultiple;
+    return modifier;
+}
+// MARK: - public method
++ (SDEventLinePositionModifier *)defaultPositionModifier{
+    SDEventLinePositionModifier *modifier = [SDEventLinePositionModifier new];
+    modifier.font = [UIFont fontWithName:@"Heiti SC" size:17];
+    modifier.paddingTop = 12;
+    modifier.paddingBottom = 12;
+    modifier.lineHeightMultiple = 1.5;
     return modifier;
 }
 - (CGFloat)heightForLineCount:(NSUInteger)lineCount{
