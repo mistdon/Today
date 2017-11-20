@@ -30,6 +30,8 @@
     self.tableHeaderView = [UIView new];
     self.tableFooterView = [UIView new];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.showsVerticalScrollIndicator = NO;
+    self.showsHorizontalScrollIndicator = NO;
 }
 
 @end

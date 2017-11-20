@@ -13,6 +13,9 @@
 FOUNDATION_EXPORT CGFloat const KCellTextFontSize; //文本字体大小
 FOUNDATION_EXPORT CGFloat const KCellPaddingText;  //文本与其它元素留白
 
+typedef NS_ENUM(NSUInteger, SDEventLayoutType){
+    SDEventLayoutTypeHome //首页样式
+};
 
 @interface SDEventLayout : NSObject
 
@@ -25,6 +28,8 @@ FOUNDATION_EXPORT CGFloat const KCellPaddingText;  //文本与其它元素留白
 - (void)layout;
 //! 总高度
 @property (nonatomic, assign) CGFloat totalHeight;
+//! 有效宽度
+@property (nonatomic, assign) CGFloat totalWidth;
 //! 文本高度
 @property (nonatomic, assign) CGFloat textHeight;
 //! 内边距

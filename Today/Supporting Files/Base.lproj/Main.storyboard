@@ -160,10 +160,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tq1-Gx-eJe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7VG-K7-Nqu" secondAttribute="leading" constant="20" symbolic="YES" id="7Ac-Ek-Vv0"/>
-                            <constraint firstItem="LpZ-aS-vhf" firstAttribute="top" secondItem="29P-cg-qac" secondAttribute="bottom" id="HiN-g8-eYC"/>
                             <constraint firstItem="29P-cg-qac" firstAttribute="leading" secondItem="7VG-K7-Nqu" secondAttribute="leading" id="TCe-AN-OJo"/>
                             <constraint firstItem="LpZ-aS-vhf" firstAttribute="top" secondItem="Tq1-Gx-eJe" secondAttribute="bottom" constant="20" id="aPW-fY-pgh"/>
                             <constraint firstAttribute="trailing" secondItem="Tq1-Gx-eJe" secondAttribute="trailing" constant="20" id="bmw-6M-45p"/>
+                            <constraint firstAttribute="bottom" secondItem="29P-cg-qac" secondAttribute="bottom" id="cRa-MF-PUp"/>
                             <constraint firstItem="29P-cg-qac" firstAttribute="top" secondItem="n5y-FR-hfl" secondAttribute="bottom" id="ey8-D5-iej"/>
                             <constraint firstAttribute="trailing" secondItem="29P-cg-qac" secondAttribute="trailing" id="kGh-k5-jEA"/>
                         </constraints>
