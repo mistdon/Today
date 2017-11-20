@@ -14,6 +14,8 @@
 //! 如果有值,就是编辑; 没有值,就是新加
 @property (nonatomic, nullable) SDEventItem *eventItem;
 
+@property (nonatomic, assign, getter=isNewPost) BOOL newPost;
+
 @end
 
 FOUNDATION_EXPORT UINavigationController *SDWriteNavi(SDEventItem*);

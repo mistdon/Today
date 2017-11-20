@@ -16,8 +16,9 @@
 #import <Masonry/Masonry.h>
 #import "SDToast.h"
 #import "SDConvenientFunc.h"
+#import "SDWritingToolbar.h"
 
-static CGFloat const KToolBarHeight = (35 + 64);
+static CGFloat const KToolBarHeight = 64;
 
 UINavigationController *SDWriteNavi(SDEventItem *item){
     WritingViewController *write = [WritingViewController new];
@@ -26,9 +27,11 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
 }
 
 @interface WritingViewController ()<CLLocationManagerDelegate, YYTextKeyboardObserver, YYTextViewDelegate>
+@property (nonatomic) UITextField *titleTextField;
 @property (nonatomic) YYTextView *textView;
-@property (nonatomic) UIView *toolbar;
 @property (nonatomic) YYKeyboardManager *manager;
+@property (nonatomic, strong) SDWritingToolbar *toolbar;
+@property (nonatomic, assign) BOOL isInputEmoticon;
 
 @end
 
@@ -43,14 +46,12 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
     // Do any additional setup after loading the view.
     self.backgroundImageUrl = KDefaultBackgroundImageUrl;
     [self setupUI];
-//    self.textView.placeholderText = @"今天发生什么有趣的事情了?";
-//    self.textView.delegate = self;
-//    [[SDLocationService sharedSerice] requesetLocaion];
-//
-    if (self.eventItem) {
+    if (self.eventItem && !self.isNewPost) {
         self.textView.text = [self.eventItem.contents stringByAppendingString:self.eventItem.contents];
+    }else{
+        self.eventItem = [SDEventItem new];
     }
-    self.navigationItem.title = self.eventItem.title.length > 0 ? self.eventItem.title : @"写入你的故事。。。";
+    self.navigationItem.title = self.eventItem.title.length > 0 ? self.eventItem.title : @"今日新鲜的事情了啊";
 }
 - (void)setupUI{
     // navigation Bar
@@ -59,8 +60,26 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
     self.navigationItem.leftBarButtonItem = cancelItem;
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(completeAction:)];
     self.navigationItem.rightBarButtonItem = done;
+    //TODO: 添加标题输入项(可选)
     //text View
     [self.view addSubview:self.textView];
+    
+    [self _initToolbar];
+    @weakify(self);
+    self.toolbar.callBackBlock = ^(SDToolBarType type) {
+        @strongify(self);
+        switch (type) {
+            case SDToolBarTypeTitle:
+                [self sd_addTitle];
+                break;
+            case SDToolBarTypeLocation:
+                [self sd_addLocation];
+                break;
+            default:
+                break;
+        }
+    };
+    [self.textView becomeFirstResponder];
     
 }
 - (YYTextView *)textView{
@@ -70,21 +89,23 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
         _textView.textContainerInset = UIEdgeInsetsMake(12, 16, 12, 16);
         _textView.contentInset = UIEdgeInsetsMake(0, 0, KToolBarHeight, 0);
         _textView.backgroundColor = [UIColor lightTextColor];
+        _textView.extraAccessoryViewHeight = KToolBarHeight;
         _textView.alwaysBounceVertical = YES;
         _textView.alwaysBounceHorizontal = NO;
         _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _textView.delegate = self;
         _textView.inputAccessoryView = [UIView new];
         _textView.linePositionModifier = [SDEventLinePositionModifier defaultPositionModifier];
+        _textView.placeholderText = @"今天发生什么有趣的事情了?";
     }
     return _textView;
 }
 - (void)_initToolbar {
     if (_toolbar) return;
-    _toolbar = [UIView new];
-    _toolbar.backgroundColor = [UIColor orangeColor];
+    _toolbar = [SDWritingToolbar loadFromNib];
     _toolbar.size = CGSizeMake(self.view.width, KToolBarHeight);
     _toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
     _toolbar.bottom = self.view.height;
     [self.view addSubview:_toolbar];
 }
@@ -141,5 +162,18 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
 }
+- (void)sd_addTitle{
+    NSString *newTitle = @"今日是个好日子";
+    self.eventItem.title = newTitle;
+    self.navigationItem.title = newTitle;
+}
+- (void)sd_addLocation{
+    [[SDLocationService sharedSerice] requesetLocaion];
+    self.eventItem.locationStr = @"上海市";
+}
+- (void)sd_addWeather{
+    
+}
+
 @end
 
