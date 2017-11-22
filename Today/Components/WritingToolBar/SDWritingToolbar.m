@@ -7,6 +7,8 @@
 //
 
 #import "SDWritingToolbar.h"
+#import "UIColor+SDColor.h"
+
 @interface SDWritingToolbar()
 @property (nonatomic, weak) UIButton *addTitleButton;
 @property (nonatomic, weak) UIButton *addLocationButton;
@@ -18,7 +20,7 @@
 }
 - (void)awakeFromNib{
     [super awakeFromNib];
-    self.backgroundColor = [UIColor orangeColor];
+    self.backgroundColor = [UIColor sd_mainThemeColor];
 }
 - (IBAction)buttonClicked:(UIButton *)sender {
     if (self.callBackBlock) {

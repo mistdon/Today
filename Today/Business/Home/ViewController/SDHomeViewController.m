@@ -15,7 +15,6 @@
 #import "SDAdView.h"
 
 #import "WritingViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
 #import "SDToast.h"
 #import "SDConvenientFunc.h"

@@ -13,7 +13,7 @@ target 'Today' do
   # Pods for Today
   pod 'SDNetworking'
   pod 'AFNetworking', '~> 2.5'
-  pod 'ReactiveCocoa', '~> 2.5'
+  pod 'ReactiveObjC', '~> 3.0.0'
   pod 'YYKit'
   pod 'YYKeyboardManager'
   pod 'Masonry'

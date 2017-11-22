@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)sd_formateCreateDateString;
 
 @end
-
+typedef void(^completionBlock)(BOOL isSuccess, NSError *error);
 // MARK: AVHelper
 @interface SDEventItem(AVHelper)
 
@@ -59,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)deleteEvents;
 //! 查询所有日志
 + (NSArray<__kindof SDEventItem *> *)queryAllEvents;
+
+//- (void)saveEventsInBackground:(completionBlock)completion;;
 
 @end
 

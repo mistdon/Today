@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol SDLocationServiceProtocol<NSObject>
 
 - (void)locationService:(SDLocationService *)locaservice updateLocation:(NSArray<__kindof CLPlacemark *> *)placeMarks;
+
 - (void)locationService:(SDLocationService *)locaservice failWithError:(NSError *)error;
 
 @end

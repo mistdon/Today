@@ -47,13 +47,7 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (0.2.1):
     - FBRetainCycleDetector
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
+  - ReactiveObjC (3.0.0)
   - SDNetworking (0.1.2)
   - SDViewHelper (1.0.0)
   - SDWebImage (4.2.1):
@@ -75,7 +69,7 @@ DEPENDENCIES:
   - LeanCloudSocial
   - Masonry
   - MLeaksFinder (~> 0.2.1)
-  - ReactiveCocoa (~> 2.5)
+  - ReactiveObjC (~> 3.0.0)
   - SDNetworking
   - SDViewHelper
   - SDWebImage
@@ -94,7 +88,7 @@ SPEC CHECKSUMS:
   LeanCloudSocial: 18728bcff7cc05779bd46a725b56e61f80ee1b5f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDNetworking: ebf2d841597c6da5b7087e3b9584fcd85e1034fd
   SDViewHelper: 20f24b44bb2b2602ae7ea7d024c0fad1aa51395a
   SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
@@ -102,6 +96,6 @@ SPEC CHECKSUMS:
   YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 58306b1b19b26d70550031a9250e88e0cf970f89
+PODFILE CHECKSUM: 375acc0b9eb48bbaa5bece3dfa9c9deb59eaa0b0
 
 COCOAPODS: 1.2.0

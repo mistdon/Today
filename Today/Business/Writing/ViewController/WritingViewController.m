@@ -11,14 +11,13 @@
 #import "SDLocationService.h"
 #import "UIImageView+SDImageManagerHelper.h"
 #import <YYKit/YYKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <YYKeyboardManager/YYKeyboardManager.h>
 #import <Masonry/Masonry.h>
 #import "SDToast.h"
 #import "SDConvenientFunc.h"
 #import "SDWritingToolbar.h"
 
-static CGFloat const KToolBarHeight = 64;
+static CGFloat const KToolBarHeight = 44;
 
 UINavigationController *SDWriteNavi(SDEventItem *item){
     WritingViewController *write = [WritingViewController new];
@@ -173,6 +172,28 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
     NSString *newTitle = @"今日是个好日子";
     self.eventItem.title = newTitle;
     self.navigationItem.title = newTitle;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Add Title" message:@"Add your personal title" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Please input new title!";
+    }];
+    @weakify(self);
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSString *text = alert.textFields.firstObject.text;
+        if (text.length == 0) {
+            [SDToast message:@"Cannot be empty"];
+            return ;
+        }
+        @strongify(self);
+        self.title = text;
+        
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        ;
+    }];
+    [alert addAction:action];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:NULL];
+    
 }
 - (void)sd_addLocation{
     [self.locationService requesetLocaion];
@@ -182,11 +203,20 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
 }
 // MARK: - SDLocationServiceProtocol
 - (void)locationService:(SDLocationService *)locaservice updateLocation:(NSArray<__kindof CLPlacemark *> *)placeMarks{
-    if (placeMarks.count == 0)return;
+    if (placeMarks.count == 0) {
+        self.eventItem.locationStr = @"北京市";
+        AVGeoPoint *point = [AVGeoPoint geoPointWithLatitude:39.9 longitude:116.4];
+        self.eventItem.geoPoint = point;
+        [SDToast message:@"获取位置失败,以测试数据替代"];
+        return;
+    }
     CLPlacemark *mark = placeMarks.firstObject;
     NSString *place = [NSString stringWithFormat:@"%@,%@",mark.locality, mark.name];
     self.eventItem.locationStr = place;
+    [SDToast message:place];
 }
-
+- (void)locationService:(SDLocationService *)locaservice failWithError:(NSError *)error{
+    [SDToast message:error.localizedDescription];
+}
 @end
 

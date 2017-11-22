@@ -63,5 +63,8 @@ RegisterAVObject
     NSArray *array =  [query findObjects];
     return array;
 }
+- (void)saveEventsInBackground:(completionBlock)completion{
+//    self savein
+}
 
 @end
