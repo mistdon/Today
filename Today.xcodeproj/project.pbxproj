@@ -75,10 +75,10 @@
 		3B415EA91FBC025A0079B9AB /* SDEventLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDEventLayout.m; sourceTree = "<group>"; };
 		3B415EAB1FBC0C1B0079B9AB /* SDConvenientFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDConvenientFunc.h; sourceTree = "<group>"; };
 		3B415EAC1FBC0C1B0079B9AB /* SDConvenientFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDConvenientFunc.m; sourceTree = "<group>"; };
+		3B43A6931FC58A02007B7C20 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B698D801FC32322002F52E5 /* SDWritingToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWritingToolbar.h; sourceTree = "<group>"; };
 		3B698D811FC32322002F52E5 /* SDWritingToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWritingToolbar.m; sourceTree = "<group>"; };
 		3B698D831FC32494002F52E5 /* SDWritingToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWritingToolbar.xib; sourceTree = "<group>"; };
-		3B698D861FC3287F002F52E5 /* today.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = today.pch; sourceTree = "<group>"; };
 		3BC2331B1FBAEDB800FF0A1D /* HomeItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeItemTableViewCell.h; sourceTree = "<group>"; };
 		3BC2331C1FBAEDB800FF0A1D /* HomeItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeItemTableViewCell.m; sourceTree = "<group>"; };
 		3BC2331D1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 				3BD0583E1E5C45A800C891E4 /* github.jpeg */,
 				3BD058071E5BE1CB00C891E4 /* main.m */,
 				3B32E6CC1FBB3E36001FC11B /* README.md */,
-				3B698D861FC3287F002F52E5 /* today.pch */,
+				3B43A6931FC58A02007B7C20 /* PrefixHeader.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -661,7 +661,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Today/today.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -714,7 +714,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Today/today.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -734,8 +734,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S8238R3HUC;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Today/PrefixHeader.pch;
 				INFOPLIST_FILE = "Today/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -752,8 +753,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S8238R3HUC;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Today/PrefixHeader.pch;
 				INFOPLIST_FILE = "Today/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

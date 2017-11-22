@@ -26,16 +26,23 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
     return [[UINavigationController alloc] initWithRootViewController:write];
 }
 
-@interface WritingViewController ()<CLLocationManagerDelegate, YYTextKeyboardObserver, YYTextViewDelegate>
+@interface WritingViewController ()<CLLocationManagerDelegate, YYTextKeyboardObserver, YYTextViewDelegate, SDLocationServiceProtocol>
 @property (nonatomic) UITextField *titleTextField;
 @property (nonatomic) YYTextView *textView;
 @property (nonatomic) YYKeyboardManager *manager;
 @property (nonatomic, strong) SDWritingToolbar *toolbar;
 @property (nonatomic, assign) BOOL isInputEmoticon;
-
+@property (nonatomic) SDLocationService *locationService;
 @end
 
 @implementation WritingViewController
+- (SDLocationService *)locationService{
+    if (!_locationService) {
+        _locationService = [SDLocationService new];
+        _locationService.delegate = self;
+    }
+    return _locationService;
+}
 - (instancetype)init{
     self = [super init];
     [[YYTextKeyboardManager defaultManager] addObserver:self];
@@ -168,11 +175,17 @@ UINavigationController *SDWriteNavi(SDEventItem *item){
     self.navigationItem.title = newTitle;
 }
 - (void)sd_addLocation{
-    [[SDLocationService sharedSerice] requesetLocaion];
-    self.eventItem.locationStr = @"上海市";
+    [self.locationService requesetLocaion];
 }
 - (void)sd_addWeather{
     
+}
+// MARK: - SDLocationServiceProtocol
+- (void)locationService:(SDLocationService *)locaservice updateLocation:(NSArray<__kindof CLPlacemark *> *)placeMarks{
+    if (placeMarks.count == 0)return;
+    CLPlacemark *mark = placeMarks.firstObject;
+    NSString *place = [NSString stringWithFormat:@"%@,%@",mark.locality, mark.name];
+    self.eventItem.locationStr = place;
 }
 
 @end

@@ -10,16 +10,17 @@
 #import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class SDLocationService;
+@protocol SDLocationServiceProtocol<NSObject>
+
+- (void)locationService:(SDLocationService *)locaservice updateLocation:(NSArray<__kindof CLPlacemark *> *)placeMarks;
+- (void)locationService:(SDLocationService *)locaservice failWithError:(NSError *)error;
+
+@end
 
 @interface SDLocationService : NSObject
 
-@property (nonatomic, copy) NSString* country;
-@property (nonatomic, copy) NSString* provience;
-@property (nonatomic, copy) NSString* city;
-
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-
-+ (instancetype)sharedSerice;
+@property (nonatomic, weak) id<SDLocationServiceProtocol> delegate;
 
 - (void)requesetLocaion;
 

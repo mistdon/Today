@@ -10,7 +10,7 @@
 #import <Masonry/Masonry.h>
 
 #import "UIImageView+SDImageManagerHelper.h"
-#import "today.pch"
+
 @interface SDBaseViewController ()
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @end
@@ -30,7 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"%@",SDPCH);
+//    NSLog(@"%@",SDPCH);
+    
 }
 
 - (void)didReceiveMemoryWarning {
