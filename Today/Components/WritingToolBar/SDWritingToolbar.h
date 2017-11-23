@@ -10,11 +10,13 @@
 
 typedef NS_ENUM(NSUInteger, SDToolBarType){
     SDToolBarTypeTitle, //添加标题
-    SDToolBarTypeLocation // 添加地理位置
+    SDToolBarTypeLocation, // 添加地理位置
+    SDToolBarTypeWeather,
+    SDToolBarTypeImage
 };
 
 @interface SDWritingToolbar : UIView
-
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (nonatomic, copy) void(^callBackBlock)(SDToolBarType type);
 
 + (instancetype)loadFromNib;

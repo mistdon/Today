@@ -10,6 +10,13 @@
 #import "LeanCloud.h"
 #import "SDHomeViewController.h"
 #import "SDRootViewController.h"
+
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
 @interface AppDelegate ()
 
 @end
@@ -29,7 +36,7 @@
     self.window.rootViewController = root;
     [self.window makeKeyAndVisible];
     
-    
+    [self configureLog];
     
     return YES;
 }
@@ -60,6 +67,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (void)configureLog{
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    DDLogInfo(@"info");
+    DDLogError(@"error");
 
+}
 
 @end

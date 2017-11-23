@@ -7,13 +7,13 @@
 //
 
 #import "UIImageView+SDImageManagerHelper.h"
-#import <YYKit/UIImageView+YYWebImage.h>
+#import <YYWebImage/YYWebImage.h>
 NSString *const KDefaultBackgroundImageUrl = @"http://img.ivsky.com/img/tupian/pre/201012/25/suse_zhiwen.jpg";
 
 @implementation UIImageView (SDImageManagerHelper)
 
 - (void)sd_setImageWithUrlString:(NSString *)str{
-    [self setImageWithURL:[NSURL URLWithString:str] placeholder:nil];
+    [self yy_setImageWithURL:[NSURL URLWithString:str] placeholder:nil];
 }
 
 @end

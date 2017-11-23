@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YYKit/YYKit.h>
 #import "SDEventItem.h"
 
 FOUNDATION_EXPORT CGFloat const KCellTextFontSize; //文本字体大小

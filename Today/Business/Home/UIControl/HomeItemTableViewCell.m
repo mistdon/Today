@@ -8,7 +8,7 @@
 
 #import "HomeItemTableViewCell.h"
 #import "SDConvenientFunc.h"
-#import <YYKit/UIView+YYAdd.h>
+
 
 @interface HomeItemTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;

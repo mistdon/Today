@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVOSCloud.h>
-
+#import <ReactiveObjC/ReactiveObjC.h>
 @class Account;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 //! 日记Item
 @interface SDEventItem : AVObject<AVSubclassing>
 
-//@property (nonatomic, strong, readonly) Account *owner; //所有者
+@property (nonatomic, strong, readonly) Account *owner; //所有者
 //! 文章标题
 @property (nonatomic, copy) NSString *title;
 //! 记录内容
@@ -56,11 +56,15 @@ typedef void(^completionBlock)(BOOL isSuccess, NSError *error);
 //! 创建一条日志, 并且保存
 - (BOOL)saveEvents;
 //! 删除本条目录
-- (BOOL)deleteEvents;
-//! 查询所有日志
-+ (NSArray<__kindof SDEventItem *> *)queryAllEvents;
+- (BOOL)deleteEvents NS_DEPRECATED_IOS(2_0,9_0, "咱不支持删除功能");
 
 //- (void)saveEventsInBackground:(completionBlock)completion;;
+//! 查询当前用户的所有日志
++ (RACSignal *)queryAllCurrentUserEvents;
+
+//! 查询一条日志
++ (RACSignal *)queryEventItemById:(NSString *)objectId;
+
 
 @end
 

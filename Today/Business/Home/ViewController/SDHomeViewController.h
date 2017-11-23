@@ -6,8 +6,8 @@
 //  Copyright © 2017年 shendong. All rights reserved.
 //
 
-#import "SDBaseViewController.h"
+#import "DXTableComponentViewController.h"
 
-@interface SDHomeViewController : SDBaseViewController
+@interface SDHomeViewController : DXTableComponentViewController
 
 @end

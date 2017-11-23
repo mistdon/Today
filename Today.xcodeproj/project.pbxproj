@@ -10,7 +10,7 @@
 		12AA4565FD6D887C315063EC /* libPods-Today.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC56497DC2B8986631167E8 /* libPods-Today.a */; };
 		3B0F89181FB568EF00DB8014 /* SDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F89171FB568EF00DB8014 /* SDHomeViewController.m */; };
 		3B0F891C1FB56AC300DB8014 /* SDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891B1FB56AC300DB8014 /* SDBaseViewController.m */; };
-		3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */; };
+		3B0F891F1FB56AEA00DB8014 /* SDWritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891E1FB56AEA00DB8014 /* SDWritingViewController.m */; };
 		3B32E6CD1FBB3E36001FC11B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B32E6CC1FBB3E36001FC11B /* README.md */; };
 		3B3654E51FBDDAED009B9937 /* SDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3654E21FBDDAED009B9937 /* SDRootViewController.m */; };
 		3B3654E61FBDDAED009B9937 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3654E41FBDDAED009B9937 /* BaseTableView.m */; };
@@ -19,10 +19,11 @@
 		3B415EAD1FBC0C1B0079B9AB /* SDConvenientFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EAC1FBC0C1B0079B9AB /* SDConvenientFunc.m */; };
 		3B698D821FC32322002F52E5 /* SDWritingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B698D811FC32322002F52E5 /* SDWritingToolbar.m */; };
 		3B698D841FC32494002F52E5 /* SDWritingToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B698D831FC32494002F52E5 /* SDWritingToolbar.xib */; };
+		3B76FBFE1FC666D400D0AA4B /* LeanCloudAbout.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B76FBFD1FC666D400D0AA4B /* LeanCloudAbout.md */; };
+		3B76FC041FC6686000D0AA4B /* SDUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B76FC031FC6686000D0AA4B /* SDUserTests.m */; };
+		3B76FC061FC6686C00D0AA4B /* SDEventItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B76FC051FC6686C00D0AA4B /* SDEventItemTests.m */; };
 		3BC069501FC5CA4200B63359 /* TodayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0694F1FC5CA4200B63359 /* TodayTests.m */; };
 		3BC0695E1FC5CA5C00B63359 /* TodayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC0695D1FC5CA5C00B63359 /* TodayUITests.m */; };
-		3BC069681FC5CE9F00B63359 /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC069671FC5CE9F00B63359 /* SDUser.m */; };
-		3BC069691FC5CE9F00B63359 /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC069671FC5CE9F00B63359 /* SDUser.m */; };
 		3BC2331E1FBAEDB800FF0A1D /* HomeItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2331C1FBAEDB800FF0A1D /* HomeItemTableViewCell.m */; };
 		3BC2331F1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2331D1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib */; };
 		3BC233231FBAFC6000FF0A1D /* SDLocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC233221FBAFC6000FF0A1D /* SDLocationService.m */; };
@@ -39,12 +40,21 @@
 		3BD058351E5BF9FB00C891E4 /* EventsRepeatPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD058341E5BF9FB00C891E4 /* EventsRepeatPolicy.m */; };
 		3BD0583D1E5C31E200C891E4 /* NSDate+events.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0583C1E5C31E200C891E4 /* NSDate+events.m */; };
 		3BD0583F1E5C45A800C891E4 /* github.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3BD0583E1E5C45A800C891E4 /* github.jpeg */; };
+		3BDD7EC81FC6B2710065747A /* SDEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EC71FC6B2710065747A /* SDEventDetailViewController.m */; };
+		3BDD7EDB1FC6D4820065747A /* SDPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EDA1FC6D4820065747A /* SDPersonalViewController.m */; };
+		3BDD7EE41FC6D4E20065747A /* DXBaseTableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EDE1FC6D4E20065747A /* DXBaseTableComponent.m */; };
+		3BDD7EE51FC6D4E20065747A /* DXCollectionComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EE01FC6D4E20065747A /* DXCollectionComponent.m */; };
+		3BDD7EE61FC6D4E20065747A /* DXTableComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EE31FC6D4E20065747A /* DXTableComponentViewController.m */; };
+		3BDD7EE91FC6D7B30065747A /* SDPersonalComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EE81FC6D7B30065747A /* SDPersonalComponent.m */; };
+		3BDD7EEC1FC6DA480065747A /* SDHomeComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD7EEB1FC6DA480065747A /* SDHomeComponent.m */; };
 		3BF1C4F81E640CDC00223E49 /* AddEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C4F71E640CDC00223E49 /* AddEventsViewController.m */; };
 		3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5101E6410E300223E49 /* EventsManager.m */; };
 		3BF1C5141E642DC900223E49 /* EventGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5131E642DC900223E49 /* EventGroupManager.m */; };
 		3BF1C5181E64353100223E49 /* APNDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1C5171E64353100223E49 /* APNDispatcher.m */; };
 		3BF744101FBD293900280885 /* SDToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7440F1FBD293900280885 /* SDToast.m */; };
 		3BF744131FBD2FB000280885 /* UIColor+SDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF744121FBD2FB000280885 /* UIColor+SDColor.m */; };
+		532CEE267706C971A864DB62 /* libPods-TodayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83343DCFB3AE0ACA4B01FB87 /* libPods-TodayUITests.a */; };
+		AEE92CB603FE4B88C16D9968 /* libPods-TodayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2464407631797E1693F83 /* libPods-TodayTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,14 +88,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06BCDD6D0FFBE5CF0423264B /* Pods-TodayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayUITests/Pods-TodayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1EC56497DC2B8986631167E8 /* libPods-Today.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Today.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B0284E81FC5BFBC00332956 /* TodayPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayPrefixHeader.pch; sourceTree = "<group>"; };
+		2DED8E94496A87C013379E49 /* Pods-TodayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayTests/Pods-TodayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30B2464407631797E1693F83 /* libPods-TodayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0F89161FB568EF00DB8014 /* SDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeViewController.h; sourceTree = "<group>"; };
 		3B0F89171FB568EF00DB8014 /* SDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeViewController.m; sourceTree = "<group>"; };
 		3B0F891A1FB56AC300DB8014 /* SDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseViewController.h; sourceTree = "<group>"; };
 		3B0F891B1FB56AC300DB8014 /* SDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseViewController.m; sourceTree = "<group>"; };
-		3B0F891D1FB56AEA00DB8014 /* WritingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WritingViewController.h; sourceTree = "<group>"; };
-		3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WritingViewController.m; sourceTree = "<group>"; };
+		3B0F891D1FB56AEA00DB8014 /* SDWritingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWritingViewController.h; sourceTree = "<group>"; };
+		3B0F891E1FB56AEA00DB8014 /* SDWritingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWritingViewController.m; sourceTree = "<group>"; };
 		3B32E6CC1FBB3E36001FC11B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3B3654E11FBDDAED009B9937 /* SDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRootViewController.h; sourceTree = "<group>"; };
 		3B3654E21FBDDAED009B9937 /* SDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRootViewController.m; sourceTree = "<group>"; };
@@ -100,14 +112,16 @@
 		3B698D801FC32322002F52E5 /* SDWritingToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWritingToolbar.h; sourceTree = "<group>"; };
 		3B698D811FC32322002F52E5 /* SDWritingToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWritingToolbar.m; sourceTree = "<group>"; };
 		3B698D831FC32494002F52E5 /* SDWritingToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDWritingToolbar.xib; sourceTree = "<group>"; };
+		3B76FBFD1FC666D400D0AA4B /* LeanCloudAbout.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LeanCloudAbout.md; sourceTree = "<group>"; };
+		3B76FC031FC6686000D0AA4B /* SDUserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDUserTests.m; sourceTree = "<group>"; };
+		3B76FC051FC6686C00D0AA4B /* SDEventItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDEventItemTests.m; sourceTree = "<group>"; };
+		3B76FC081FC668E400D0AA4B /* TodayPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayPrefixHeader.pch; sourceTree = "<group>"; };
 		3BC0694D1FC5CA4200B63359 /* TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC0694F1FC5CA4200B63359 /* TodayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayTests.m; sourceTree = "<group>"; };
 		3BC069511FC5CA4200B63359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BC0695B1FC5CA5C00B63359 /* TodayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC0695D1FC5CA5C00B63359 /* TodayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayUITests.m; sourceTree = "<group>"; };
 		3BC0695F1FC5CA5C00B63359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BC069661FC5CE9F00B63359 /* SDUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDUser.h; sourceTree = "<group>"; };
-		3BC069671FC5CE9F00B63359 /* SDUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDUser.m; sourceTree = "<group>"; };
 		3BC2331B1FBAEDB800FF0A1D /* HomeItemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeItemTableViewCell.h; sourceTree = "<group>"; };
 		3BC2331C1FBAEDB800FF0A1D /* HomeItemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeItemTableViewCell.m; sourceTree = "<group>"; };
 		3BC2331D1FBAEDB800FF0A1D /* HomeItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -138,6 +152,21 @@
 		3BD0583B1E5C31E200C891E4 /* NSDate+events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+events.h"; sourceTree = "<group>"; };
 		3BD0583C1E5C31E200C891E4 /* NSDate+events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+events.m"; sourceTree = "<group>"; };
 		3BD0583E1E5C45A800C891E4 /* github.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = github.jpeg; sourceTree = "<group>"; };
+		3BDD7EC61FC6B2710065747A /* SDEventDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDEventDetailViewController.h; sourceTree = "<group>"; };
+		3BDD7EC71FC6B2710065747A /* SDEventDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDEventDetailViewController.m; sourceTree = "<group>"; };
+		3BDD7ED91FC6D4820065747A /* SDPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPersonalViewController.h; sourceTree = "<group>"; };
+		3BDD7EDA1FC6D4820065747A /* SDPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPersonalViewController.m; sourceTree = "<group>"; };
+		3BDD7EDD1FC6D4E20065747A /* DXBaseTableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXBaseTableComponent.h; sourceTree = "<group>"; };
+		3BDD7EDE1FC6D4E20065747A /* DXBaseTableComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXBaseTableComponent.m; sourceTree = "<group>"; };
+		3BDD7EDF1FC6D4E20065747A /* DXCollectionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXCollectionComponent.h; sourceTree = "<group>"; };
+		3BDD7EE01FC6D4E20065747A /* DXCollectionComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXCollectionComponent.m; sourceTree = "<group>"; };
+		3BDD7EE11FC6D4E20065747A /* DXTableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXTableComponent.h; sourceTree = "<group>"; };
+		3BDD7EE21FC6D4E20065747A /* DXTableComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXTableComponentViewController.h; sourceTree = "<group>"; };
+		3BDD7EE31FC6D4E20065747A /* DXTableComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXTableComponentViewController.m; sourceTree = "<group>"; };
+		3BDD7EE71FC6D7B30065747A /* SDPersonalComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPersonalComponent.h; sourceTree = "<group>"; };
+		3BDD7EE81FC6D7B30065747A /* SDPersonalComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPersonalComponent.m; sourceTree = "<group>"; };
+		3BDD7EEA1FC6DA480065747A /* SDHomeComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDHomeComponent.h; sourceTree = "<group>"; };
+		3BDD7EEB1FC6DA480065747A /* SDHomeComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDHomeComponent.m; sourceTree = "<group>"; };
 		3BF1C4F61E640CDC00223E49 /* AddEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventsViewController.h; sourceTree = "<group>"; };
 		3BF1C4F71E640CDC00223E49 /* AddEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventsViewController.m; sourceTree = "<group>"; };
 		3BF1C4FE1E640F6F00223E49 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -152,6 +181,9 @@
 		3BF744111FBD2FB000280885 /* UIColor+SDColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SDColor.h"; sourceTree = "<group>"; };
 		3BF744121FBD2FB000280885 /* UIColor+SDColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SDColor.m"; sourceTree = "<group>"; };
 		812331B116A99535B32E8EEB /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		83343DCFB3AE0ACA4B01FB87 /* libPods-TodayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8A59E4E35D40FD3C84CC78 /* Pods-TodayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayUITests/Pods-TodayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B64161A7561B46A36B4ED100 /* Pods-TodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayTests/Pods-TodayTests.release.xcconfig"; sourceTree = "<group>"; };
 		D9D45C280860469ADBB741C9 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE92CB603FE4B88C16D9968 /* libPods-TodayTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532CEE267706C971A864DB62 /* libPods-TodayUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +260,10 @@
 			children = (
 				3B0F89161FB568EF00DB8014 /* SDHomeViewController.h */,
 				3B0F89171FB568EF00DB8014 /* SDHomeViewController.m */,
+				3BDD7EEA1FC6DA480065747A /* SDHomeComponent.h */,
+				3BDD7EEB1FC6DA480065747A /* SDHomeComponent.m */,
+				3BDD7EC61FC6B2710065747A /* SDEventDetailViewController.h */,
+				3BDD7EC71FC6B2710065747A /* SDEventDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -265,8 +303,8 @@
 		3B0F89141FB568D600DB8014 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3B0F891D1FB56AEA00DB8014 /* WritingViewController.h */,
-				3B0F891E1FB56AEA00DB8014 /* WritingViewController.m */,
+				3B0F891D1FB56AEA00DB8014 /* SDWritingViewController.h */,
+				3B0F891E1FB56AEA00DB8014 /* SDWritingViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -305,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				3BC0694F1FC5CA4200B63359 /* TodayTests.m */,
+				3B76FC031FC6686000D0AA4B /* SDUserTests.m */,
+				3B76FC051FC6686C00D0AA4B /* SDEventItemTests.m */,
 				3BC069511FC5CA4200B63359 /* Info.plist */,
 			);
 			path = TodayTests;
@@ -322,8 +362,7 @@
 		3BC069651FC5CE8300B63359 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				3BC069661FC5CE9F00B63359 /* SDUser.h */,
-				3BC069671FC5CE9F00B63359 /* SDUser.m */,
+				3BDD7ED81FC6D4690065747A /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -392,7 +431,8 @@
 				3BD0583E1E5C45A800C891E4 /* github.jpeg */,
 				3BD058071E5BE1CB00C891E4 /* main.m */,
 				3B32E6CC1FBB3E36001FC11B /* README.md */,
-				3B0284E81FC5BFBC00332956 /* TodayPrefixHeader.pch */,
+				3B76FBFD1FC666D400D0AA4B /* LeanCloudAbout.md */,
+				3B76FC081FC668E400D0AA4B /* TodayPrefixHeader.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -408,6 +448,7 @@
 		3BD0581E1E5BE37800C891E4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3BDD7EDC1FC6D4E20065747A /* DXTableComponent */,
 				3B698D7F1FC322F3002F52E5 /* WritingToolBar */,
 				3BC4D5BE1FC1CF74003E1777 /* Ad */,
 				3BF1C5151E6434DD00223E49 /* APNDispatcher */,
@@ -490,6 +531,31 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		3BDD7ED81FC6D4690065747A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3BDD7ED91FC6D4820065747A /* SDPersonalViewController.h */,
+				3BDD7EDA1FC6D4820065747A /* SDPersonalViewController.m */,
+				3BDD7EE71FC6D7B30065747A /* SDPersonalComponent.h */,
+				3BDD7EE81FC6D7B30065747A /* SDPersonalComponent.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3BDD7EDC1FC6D4E20065747A /* DXTableComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3BDD7EDD1FC6D4E20065747A /* DXBaseTableComponent.h */,
+				3BDD7EDE1FC6D4E20065747A /* DXBaseTableComponent.m */,
+				3BDD7EDF1FC6D4E20065747A /* DXCollectionComponent.h */,
+				3BDD7EE01FC6D4E20065747A /* DXCollectionComponent.m */,
+				3BDD7EE11FC6D4E20065747A /* DXTableComponent.h */,
+				3BDD7EE21FC6D4E20065747A /* DXTableComponentViewController.h */,
+				3BDD7EE31FC6D4E20065747A /* DXTableComponentViewController.m */,
+			);
+			path = DXTableComponent;
+			sourceTree = "<group>";
+		};
 		3BF1C4F51E640CB900223E49 /* ManageEvents */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +579,10 @@
 			children = (
 				812331B116A99535B32E8EEB /* Pods-Today.debug.xcconfig */,
 				D9D45C280860469ADBB741C9 /* Pods-Today.release.xcconfig */,
+				2DED8E94496A87C013379E49 /* Pods-TodayTests.debug.xcconfig */,
+				B64161A7561B46A36B4ED100 /* Pods-TodayTests.release.xcconfig */,
+				06BCDD6D0FFBE5CF0423264B /* Pods-TodayUITests.debug.xcconfig */,
+				9E8A59E4E35D40FD3C84CC78 /* Pods-TodayUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -522,6 +592,8 @@
 			children = (
 				3BF1C4FE1E640F6F00223E49 /* NotificationCenter.framework */,
 				1EC56497DC2B8986631167E8 /* libPods-Today.a */,
+				30B2464407631797E1693F83 /* libPods-TodayTests.a */,
+				83343DCFB3AE0ACA4B01FB87 /* libPods-TodayUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -533,9 +605,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BC069541FC5CA4200B63359 /* Build configuration list for PBXNativeTarget "TodayTests" */;
 			buildPhases = (
+				FB5DC4E4E27C437CE4D4B506 /* [CP] Check Pods Manifest.lock */,
 				3BC069491FC5CA4200B63359 /* Sources */,
 				3BC0694A1FC5CA4200B63359 /* Frameworks */,
 				3BC0694B1FC5CA4200B63359 /* Resources */,
+				CA2FBA3BA6A9D086373FE766 /* [CP] Embed Pods Frameworks */,
+				5FB364D90BD7448E4EE1F7F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -551,9 +626,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BC069621FC5CA5C00B63359 /* Build configuration list for PBXNativeTarget "TodayUITests" */;
 			buildPhases = (
+				BB276973F8B99C3D78764008 /* [CP] Check Pods Manifest.lock */,
 				3BC069571FC5CA5C00B63359 /* Sources */,
 				3BC069581FC5CA5C00B63359 /* Frameworks */,
 				3BC069591FC5CA5C00B63359 /* Resources */,
+				3F5A9F01673927B4C301FDA8 /* [CP] Embed Pods Frameworks */,
+				2EDACD8FBDB8803283383D8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -659,6 +737,7 @@
 				3BD058161E5BE1CB00C891E4 /* LaunchScreen.storyboard in Resources */,
 				3BD058131E5BE1CB00C891E4 /* Assets.xcassets in Resources */,
 				3B698D841FC32494002F52E5 /* SDWritingToolbar.xib in Resources */,
+				3B76FBFE1FC666D400D0AA4B /* LeanCloudAbout.md in Resources */,
 				3BD0583F1E5C45A800C891E4 /* github.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,22 +745,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		332314D885563BBECB8D2EF1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DC8E2F10494E7E1217DA4770 /* [CP] Copy Pods Resources */ = {
+		2EDACD8FBDB8803283383D8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -690,6 +754,109 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayUITests/Pods-TodayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		332314D885563BBECB8D2EF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Today-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F5A9F01673927B4C301FDA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayUITests/Pods-TodayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FB364D90BD7448E4EE1F7F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayTests/Pods-TodayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB276973F8B99C3D78764008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2FBA3BA6A9D086373FE766 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayTests/Pods-TodayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC8E2F10494E7E1217DA4770 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+				"${PODS_ROOT}/HXWeiboPhotoPicker/微博照片选择/HXWeiboPhotoPicker/HXWeiboPhotoPicker.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -711,6 +878,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Today/Pods-Today-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FB5DC4E4E27C437CE4D4B506 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -719,7 +904,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC069501FC5CA4200B63359 /* TodayTests.m in Sources */,
-				3BC069691FC5CE9F00B63359 /* SDUser.m in Sources */,
+				3B76FC061FC6686C00D0AA4B /* SDEventItemTests.m in Sources */,
+				3B76FC041FC6686000D0AA4B /* SDUserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,23 +923,29 @@
 			files = (
 				3BF1C5141E642DC900223E49 /* EventGroupManager.m in Sources */,
 				3BD058351E5BF9FB00C891E4 /* EventsRepeatPolicy.m in Sources */,
+				3BDD7EE61FC6D4E20065747A /* DXTableComponentViewController.m in Sources */,
 				3B3654E51FBDDAED009B9937 /* SDRootViewController.m in Sources */,
+				3BDD7EE51FC6D4E20065747A /* DXCollectionComponent.m in Sources */,
+				3BDD7EEC1FC6DA480065747A /* SDHomeComponent.m in Sources */,
 				3BD058221E5BE3A800C891E4 /* Account.m in Sources */,
 				3BC2331E1FBAEDB800FF0A1D /* HomeItemTableViewCell.m in Sources */,
 				3BF1C5181E64353100223E49 /* APNDispatcher.m in Sources */,
 				3BD0580B1E5BE1CB00C891E4 /* AppDelegate.m in Sources */,
-				3B0F891F1FB56AEA00DB8014 /* WritingViewController.m in Sources */,
+				3BDD7EC81FC6B2710065747A /* SDEventDetailViewController.m in Sources */,
+				3BDD7EDB1FC6D4820065747A /* SDPersonalViewController.m in Sources */,
+				3B0F891F1FB56AEA00DB8014 /* SDWritingViewController.m in Sources */,
 				3BD058251E5BE46400C891E4 /* AccountConfiguration.m in Sources */,
 				3BF744131FBD2FB000280885 /* UIColor+SDColor.m in Sources */,
 				3BD0582E1E5BE84B00C891E4 /* LeanCloud.m in Sources */,
 				3B415EAA1FBC025A0079B9AB /* SDEventLayout.m in Sources */,
 				3BC233231FBAFC6000FF0A1D /* SDLocationService.m in Sources */,
-				3BC069681FC5CE9F00B63359 /* SDUser.m in Sources */,
+				3BDD7EE41FC6D4E20065747A /* DXBaseTableComponent.m in Sources */,
 				3B0F89181FB568EF00DB8014 /* SDHomeViewController.m in Sources */,
 				3B0F891C1FB56AC300DB8014 /* SDBaseViewController.m in Sources */,
 				3BF744101FBD293900280885 /* SDToast.m in Sources */,
 				3B415EAD1FBC0C1B0079B9AB /* SDConvenientFunc.m in Sources */,
 				3BF1C5111E6410E300223E49 /* EventsManager.m in Sources */,
+				3BDD7EE91FC6D7B30065747A /* SDPersonalComponent.m in Sources */,
 				3BD058081E5BE1CB00C891E4 /* main.m in Sources */,
 				3BD0583D1E5C31E200C891E4 /* NSDate+events.m in Sources */,
 				3BD058321E5BF88600C891E4 /* SDEventItem.m in Sources */,
@@ -796,6 +988,7 @@
 /* Begin XCBuildConfiguration section */
 		3BC069551FC5CA4200B63359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DED8E94496A87C013379E49 /* Pods-TodayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -817,6 +1010,7 @@
 		};
 		3BC069561FC5CA4200B63359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B64161A7561B46A36B4ED100 /* Pods-TodayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -838,6 +1032,7 @@
 		};
 		3BC069631FC5CA5C00B63359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BCDD6D0FFBE5CF0423264B /* Pods-TodayUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -858,6 +1053,7 @@
 		};
 		3BC069641FC5CA5C00B63359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E8A59E4E35D40FD3C84CC78 /* Pods-TodayUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

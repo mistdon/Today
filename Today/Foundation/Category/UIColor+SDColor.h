@@ -11,6 +11,11 @@
 FOUNDATION_EXPORT UIColor *HexColor(NSString *);
 FOUNDATION_EXPORT UIColor *HexColorAlpha(NSString *, CGFloat alpha);
 
+/*
+ Usage : 
+  HexColor(@"#4896ff")
+ */
+
 @interface UIColor (SDColor)
 //! 主题色 懒人日记APP 15b7b9
 + (UIColor *)sd_mainThemeColor;

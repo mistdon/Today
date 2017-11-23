@@ -16,4 +16,8 @@
 
 + (void)message:(nullable NSString *)info;
 
++ (void)loading;
+
++ (void)dismiss;
+
 @end

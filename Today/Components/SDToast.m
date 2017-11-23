@@ -21,7 +21,7 @@
         [SVProgressHUD setMaximumDismissTimeInterval:2.f];
         [SVProgressHUD setMinimumDismissTimeInterval:1.f];
         [SVProgressHUD setMinimumSize:CGSizeMake(150.f, 100.f)];
-        [SVProgressHUD setBackgroundColor:HexColor(@"#4896ff")];
+        [SVProgressHUD setBackgroundColor:[UIColor sd_mainThemeColor]];
         [SVProgressHUD setImageViewSize:CGSizeMake(60, 60)];
         [SVProgressHUD setFont:[UIFont systemFontOfSize:18]];
     }
@@ -36,4 +36,13 @@
 + (void)message:(NSString *)info{
     [SVProgressHUD showInfoWithStatus:info];
 }
+
++ (void)loading{
+    [SVProgressHUD showWithStatus:@"加载中"];
+}
+
++ (void)dismiss{
+    [SVProgressHUD dismiss];
+}
+
 @end
