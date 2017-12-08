@@ -17,6 +17,8 @@
 #import "SDWritingToolbar.h"
 #import <HXWeiboPhotoPicker/HXPhotoManager.h>
 #import <HXWeiboPhotoPicker/HXPhotoViewController.h>
+#import "SDSlideMenu.h"
+
 
 static CGFloat const KToolBarHeight = 44;
 
@@ -37,6 +39,7 @@ UINavigationController * _Nonnull SDWriteNavi(SDEventItem * _Nonnull item, BOOL 
 @property (nonatomic) HXPhotoManager *photoManager;
 @property (nonatomic) UIImage *selectedImage;
 @property (nonatomic) NSMutableAttributedString *contentText;
+@property (nonatomic) SDSlideMenu *menu;
 @end
 
 @implementation SDWritingViewController
@@ -74,21 +77,41 @@ UINavigationController * _Nonnull SDWriteNavi(SDEventItem * _Nonnull item, BOOL 
     }else{
         self.eventItem = [SDEventItem new];
     }
-    self.navigationItem.title = self.eventItem.title.length > 0 ? self.eventItem.title : @"今日新鲜的事情了啊";
+//    self.navigationItem.title = self.eventItem.title.length > 0 ? self.eventItem.title : @"今日新鲜的事情了啊";
     [self sd_addLocation];
 }
 - (void)setupUI{
     // navigation Bar
-    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction:)];
-    [cancelItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]} forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem = cancelItem;
-    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(completeAction:)];
-    self.navigationItem.rightBarButtonItem = done;
+//    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction:)];
+//    [cancelItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]} forState:UIControlStateNormal];
+//    self.navigationItem.leftBarButtonItem = cancelItem;
+//    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(completeAction:)];
+//    self.navigationItem.rightBarButtonItem = done;
     //TODO: 添加标题输入项(可选)
     //text View
     [self.view addSubview:self.textView];
     
-    [self _initToolbar];
+    self.menu = [[SDSlideMenu alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame) - 60, CGRectGetHeight(self.view.frame) - 60, 50, 50)];
+//    SDSlideMenuItem *one = [SDSlideMenuItem menui]
+    [self.menu addItems:@[[SDSlideMenuItem menuWithImage:[UIImage imageNamed:@"submit_fail"]],
+                          [SDSlideMenuItem menuWithImage:[UIImage imageNamed:@"submit_fail"]],
+                          [SDSlideMenuItem menuWithImage:[UIImage imageNamed:@"submit_fail"]],
+                          [SDSlideMenuItem menuWithImage:[UIImage imageNamed:@"submit_fail"]]]];
+    [self.view addSubview:self.menu];
+    
+    NSLog(@"self.subviews = %@",self.view.subviews);
+//    [self _initToolbar];
+    
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    btn.backgroundColor = [UIColor yellowColor];
+    btn.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+        return [RACSignal empty];
+    }];
+    [self.view addSubview:btn];
+    
     @weakify(self);
     self.toolbar.callBackBlock = ^(SDToolBarType type) {
         @strongify(self);

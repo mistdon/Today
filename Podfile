@@ -36,6 +36,7 @@ target 'Today' do
   pod 'HXWeiboPhotoPicker'
   pod 'DateTools', '~> 2.0.0'
   pod 'MLeaksFinder', '~> 0.2.1'
+  pod 'UPStackMenu'
   
   target 'TodayTests' do
       inherit! :search_paths

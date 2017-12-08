@@ -12,6 +12,8 @@
 		3B0F891C1FB56AC300DB8014 /* SDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891B1FB56AC300DB8014 /* SDBaseViewController.m */; };
 		3B0F891F1FB56AEA00DB8014 /* SDWritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F891E1FB56AEA00DB8014 /* SDWritingViewController.m */; };
 		3B32E6CD1FBB3E36001FC11B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B32E6CC1FBB3E36001FC11B /* README.md */; };
+		3B3449ED1FD90E3F00D0AAB8 /* SDSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3449EC1FD90E3F00D0AAB8 /* SDSlideMenu.m */; };
+		3B3449F01FD90FC300D0AAB8 /* SDSlideMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3449EF1FD90FC300D0AAB8 /* SDSlideMenuItem.m */; };
 		3B3654E51FBDDAED009B9937 /* SDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3654E21FBDDAED009B9937 /* SDRootViewController.m */; };
 		3B3654E61FBDDAED009B9937 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3654E41FBDDAED009B9937 /* BaseTableView.m */; };
 		3B415EA71FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B415EA61FBBEFE00079B9AB /* UIImageView+SDImageManagerHelper.m */; };
@@ -99,6 +101,10 @@
 		3B0F891D1FB56AEA00DB8014 /* SDWritingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWritingViewController.h; sourceTree = "<group>"; };
 		3B0F891E1FB56AEA00DB8014 /* SDWritingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWritingViewController.m; sourceTree = "<group>"; };
 		3B32E6CC1FBB3E36001FC11B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B3449EB1FD90E3F00D0AAB8 /* SDSlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSlideMenu.h; sourceTree = "<group>"; };
+		3B3449EC1FD90E3F00D0AAB8 /* SDSlideMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSlideMenu.m; sourceTree = "<group>"; };
+		3B3449EE1FD90FC300D0AAB8 /* SDSlideMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSlideMenuItem.h; sourceTree = "<group>"; };
+		3B3449EF1FD90FC300D0AAB8 /* SDSlideMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSlideMenuItem.m; sourceTree = "<group>"; };
 		3B3654E11FBDDAED009B9937 /* SDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRootViewController.h; sourceTree = "<group>"; };
 		3B3654E21FBDDAED009B9937 /* SDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRootViewController.m; sourceTree = "<group>"; };
 		3B3654E31FBDDAED009B9937 /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
@@ -329,6 +335,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		3B3449EA1FD90DB900D0AAB8 /* SDSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3B3449EE1FD90FC300D0AAB8 /* SDSlideMenuItem.h */,
+				3B3449EF1FD90FC300D0AAB8 /* SDSlideMenuItem.m */,
+				3B3449EB1FD90E3F00D0AAB8 /* SDSlideMenu.h */,
+				3B3449EC1FD90E3F00D0AAB8 /* SDSlideMenu.m */,
+			);
+			path = SDSlideMenu;
+			sourceTree = "<group>";
+		};
 		3B698D7F1FC322F3002F52E5 /* WritingToolBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +465,7 @@
 		3BD0581E1E5BE37800C891E4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B3449EA1FD90DB900D0AAB8 /* SDSlideMenu */,
 				3BDD7EDC1FC6D4E20065747A /* DXTableComponent */,
 				3B698D7F1FC322F3002F52E5 /* WritingToolBar */,
 				3BC4D5BE1FC1CF74003E1777 /* Ad */,
@@ -938,8 +956,10 @@
 				3BF744131FBD2FB000280885 /* UIColor+SDColor.m in Sources */,
 				3BD0582E1E5BE84B00C891E4 /* LeanCloud.m in Sources */,
 				3B415EAA1FBC025A0079B9AB /* SDEventLayout.m in Sources */,
+				3B3449ED1FD90E3F00D0AAB8 /* SDSlideMenu.m in Sources */,
 				3BC233231FBAFC6000FF0A1D /* SDLocationService.m in Sources */,
 				3BDD7EE41FC6D4E20065747A /* DXBaseTableComponent.m in Sources */,
+				3B3449F01FD90FC300D0AAB8 /* SDSlideMenuItem.m in Sources */,
 				3B0F89181FB568EF00DB8014 /* SDHomeViewController.m in Sources */,
 				3B0F891C1FB56AC300DB8014 /* SDBaseViewController.m in Sources */,
 				3BF744101FBD293900280885 /* SDToast.m in Sources */,

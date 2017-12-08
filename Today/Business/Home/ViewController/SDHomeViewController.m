@@ -102,18 +102,10 @@
 // MARK: - private method
 - (void)addNewItem:(id)sender{
     SDWritingViewController *writing = [SDWritingViewController new];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:writing];
-    [self presentViewController:navi animated:YES completion:NULL];
+    [self presentViewController:writing animated:YES completion:NULL];
 }
 - (void)showMenu{
     SDPersonalViewController *personal = [SDPersonalViewController new];
-    self.personalVC = personal;
-    [self addChildViewController:self.personalVC];
-    personal.view.alpha = 1;
-    personal.view.frame = self.view.bounds;
-//    personal.view.layer.transform = self.contentViewController.view.layer.transform;
-//    personal.view.superview.layer.sublayerTransform = _contentViewController.view.superview.layer.sublayerTransform;
-    [self.view addSubview:personal.view];
-    
+    [SDRootVC() showViewController:personal sender:nil];
 }
 @end
